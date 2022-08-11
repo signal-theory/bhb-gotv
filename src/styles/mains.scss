@@ -48,7 +48,7 @@ $sans: 'Montserrat', sans-serif;
 $display: 'recoletabold', sans-serif;
 
 // Atoms
-@import "./card.scss";
+@import "./tab-content.scss";
 
 // Components
 @import "./navbar.scss";
@@ -107,9 +107,9 @@ h3 {
 }
 
 .section {
+  position: relative;
   width: 100vw;
   height: auto;
-  overflow: hidden;
   padding: 6rem 0 5rem;
 }
 

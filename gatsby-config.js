@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Computational Design and Metal Fabrication`,
-    description: `CEO and Co-founder at Wickerson Studios and Former Chair of Sculpture at Kansas City Art Institute`,
+    title: `Vote Your Heart Out`,
+    description: `Babes Helpin' Babes at Signal Theory is an employee-driven initiative to encourage the masses to get to the polls so results more accurately embody the diverse opinions of all citizens.`,
     author: `@bethwickerson`,
   },
   plugins: [

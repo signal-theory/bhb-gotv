@@ -5,6 +5,9 @@ import { outreachData } from "../data-outreach"
 const Outreach = () => {
   return (
     <div className="section pink" id="outreach" tabIndex={-1}>
+      <Fade>
+        <img className="heart-sticker" src={outreachData.sticker} alt="vote heart sticker"></img>
+      </Fade>
       <div className="container">
         <div className="outreach-wrapper">
           <div className="outreach-header">
