@@ -1,10 +1,9 @@
 import React from "react"
-import Fade from "react-reveal/Fade"
-import data from "../yourdata"
+import { footerData } from "../data-footer"
 
 const Footer = () => {
   return (
-    <div className="section primary-blue" id="contact">
+    <div className="footer primary-blue" id="contact">
       <div className="container">
         <div className="footer-container">
           <div className="footer-links">
@@ -25,7 +24,7 @@ const Footer = () => {
           </div>
           <div className="footer-sticker">sticker</div>
           <div className="social-icons">
-            {data.social.map((socialLink, index) => (
+            {footerData.social.map((socialLink, index) => (
               <a
                 key={index}
                 href={socialLink.url}

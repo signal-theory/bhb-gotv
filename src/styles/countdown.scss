@@ -1,8 +1,51 @@
 .countdown-container {
+  max-width: 620px;
+  margin: 0 auto;
+
   p {
-    width: 90vw;
-    max-width: 670px;
     text-align: center;
   }
 
+  .countdown {
+    display: grid;
+    width: calc(90% - 4rem);
+    padding: 1rem 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+
+    &.ticker {
+      border: 3px solid $primaryRed;
+      border-radius: 3rem;
+      margin: 2rem auto 0.5rem;
+
+      .time {
+        align-self: center;
+        justify-self: center;
+        font-size: calc(3vw + 45px);
+        font-family: $display;
+        color: $primaryRed;
+        line-height: 1;
+
+        &.colon {
+          font-size: calc(3vw + 32px);
+          line-height: 1;
+          margin-top: -0.5rem;
+          position: relative;
+        }
+      }
+    }
+
+    &.legend {
+      margin: 0 auto;
+
+      .label {
+        align-self: center;
+        justify-self: center;
+        color: $primaryRed;
+      }
+    }
+  }
 }

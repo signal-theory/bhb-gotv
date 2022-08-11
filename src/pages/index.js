@@ -5,9 +5,7 @@ import SEO from "../components/seo"
 // Components
 import Header from "../components/Header"
 import Countdown from "../components/Countdown"
-// import Work from "../components/Work"
-// import About from "../components/about"
-// import Skills from "../components/skills"
+import Outreach from "../components/Outreach"
 import Footer from "../components/Footer"
 
 const IndexPage = () => (
@@ -15,6 +13,7 @@ const IndexPage = () => (
     <SEO title="Babes Helpin' Babes - Get Out The Vote 2022" />
     <Header></Header>
     <Countdown></Countdown>
+    <Outreach></Outreach>
     <Footer></Footer>
   </Layout>
 )
