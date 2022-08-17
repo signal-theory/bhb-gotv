@@ -4,7 +4,7 @@ import { countdownData } from "../data-countdown"
 
 const Countdown = () => {
   return (
-    <div className="section">
+    <div className="section" id="countdown">
       <div className="countdown-container">
         <Fade>
           <h1>{countdownData.heading}</h1>

@@ -38,8 +38,8 @@
     @include media(">=desktop") {
       display: block;
       position: absolute;
-      left: 10%;
-      bottom: 10%;
+      left: 8%;
+      top: 55%;
     }
   }
 }
@@ -59,7 +59,7 @@
 
       &.active {
         position: relative;
-        z-index: 99999;
+        z-index: 999;
         transform: scale(1.1);
       }
     }
@@ -80,7 +80,9 @@
     opacity: 0;
     padding: 0;
     margin: 0;
-    transition: all 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    transform: translate(-100%, -100%);
+    visibility: collapse;
   }
 
   .panel.active {
@@ -89,8 +91,8 @@
     margin: 0;
     height: auto;
     opacity: 1;
-    box-shadow: -1px -10px 17px 0px rgba(0, 0, 0, 0.24);
-    -webkit-box-shadow: -1px -10px 17px 0px rgba(0, 0, 0, 0.24);
-    -moz-box-shadow: -1px -10px 17px 0px rgba(0, 0, 0, 0.24);
+    transform: translate(0, 0);
+    box-shadow: -1px -8px 25px 0px rgba(0, 0, 0, 0.24);
+    visibility: visible;
   }
 }

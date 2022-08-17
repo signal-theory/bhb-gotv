@@ -3,14 +3,14 @@ import Missouri from './Missouri'
 import Kansas from './Kansas';
 
 
-const StateTabs = () => {
+const Tabs = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const handleClick = (index) => setActiveIndex(index);
   const checkActive = (index, className) => activeIndex === index ? className : "";
 
   return (
     <>
-      <div className="tabs">
+      <div className="tabs primary-yellow">
         <button
           className={`primary-btn ${checkActive(1, "active")}`}
           onClick={() => handleClick(1)}
@@ -35,4 +35,4 @@ const StateTabs = () => {
     </>
   )
 }
-export default StateTabs
+export default Tabs

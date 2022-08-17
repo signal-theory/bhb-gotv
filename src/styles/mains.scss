@@ -14,7 +14,7 @@
 $primaryBlue: #282560;
 $primaryRed: #EF4239;
 $primaryYellow: #F9C01B;
-$secondaryBlue: #CEECF4;
+$secondaryBlue: #8888E2;
 $secondaryRed: #FFBEED;
 $pink: rgba(255, 190, 237, 0.5);
 
@@ -43,18 +43,29 @@ $pink: rgba(255, 190, 237, 0.5);
   background-color: $secondaryRed;
 }
 
+.white-text {
+  color: white;
+}
+
+.red-text {
+  color: $primaryRed;
+}
+
 // FONTS
 $sans: 'Montserrat', sans-serif;
 $display: 'recoletabold', sans-serif;
 
 // Atoms
-@import "./tab-content.scss";
+@import "./links.scss";
 
 // Components
 @import "./navbar.scss";
 @import "./header.scss";
 @import "./work.scss";
 @import "./outreach.scss";
+@import "./dates.scss";
+@import "./faqs.scss";
+@import "./checklist.scss";
 @import "./skills.scss";
 @import "./countdown.scss";
 @import "./footer.scss";
@@ -153,8 +164,7 @@ h3 {
 }
 
 .small {
-  font-size: 70%;
-  line-height: 0.7;
+  font-size: 0.9em;
 }
 
 .email-link,

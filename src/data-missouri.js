@@ -1,7 +1,9 @@
+import React from 'react'
 import BTN1 from "./images/btn-check-registration.svg"
 import BTN2 from "./images/btn-register-to-vote.svg"
 import BTN3 from "./images/btn-register-paper-english.svg"
 import BTN4 from "./images/btn-register-paper-espanol.svg"
+//import FAQS_MO from "./components/atoms/VoteYourHeartOut.svg"
 
 
 export const missouriData = {
@@ -27,6 +29,58 @@ export const missouriData = {
       title: "Register To Vote By Paper (Espanol)",
       url: "/",
     },
-  ]
+  ],
+  headingDates: "Important dates for Missouri",
+  dates: [
+    {
+      date: 'OCT. 12',
+      title: "Last day to register to vote",
+    },
+    {
+      date: 'OCT. 22',
+      title: "Last day to mail out absentee ballot",
+    },
+    {
+      date: 'NOV. 7',
+      title: "Last day to vote absentee in person",
+    },
+    {
+      date: 'NOV. 8',
+      title: "Election day",
+    },
+  ],
+  headingFAQs: "FAQS",
+  faqs: [
+    {
+      title: "Is it too late to register to vote?",
+      description: <><p>Election day in Missouri is November 8, 2022. <strong>You can register to vote right now here.</strong></p><p><strong>Register by mail:</strong> Voter registration must be postmarked by 10/12/2022.</p><p><strong>Register in person:</strong> Voter registration must be received by 10/12/2022.</p><p><strong>Return your completed absentee ballot application by mail:</strong> Ballot must be received by 5:00 pm 10/26/2022.</p><p><strong>Return your completed absentee ballot application by hand:</strong> Ballot must be received by 5:00 pm 11/07/2022.</p><p><strong>Return your completed ballot by mail:</strong> Ballot must be received by 7:00 pm 11/08/2022.</p><p><strong>Return your completed ballot by hand:</strong> Ballot must be received by 7:00 pm 11/07/2022.</p></>,
+    },
+    {
+      title: "How can I make sure I'm registered to vote?",
+      description: <p>Lorem Ipsum</p>,
+    },
+    {
+      title: "What are the early voting locations?",
+      description: <p>Lorem Ipsum</p>,
+    },
+    {
+      title: "Can I pre-register if I'll be 18 years old before the next election?",
+      description: <p>Lorem Ipsum</p>,
+    },
+    {
+      title: "I moved to a new address, can I vote?",
+      description: <p>Lorem Ipsum</p>,
+    }
+  ],
+  headingChecklist: "My 2022 Voting Plan Checklist",
+  paragraphChecklist:
+    "Complete the checklist to ensure you have everything you need to vote successfully.",
+  checklist: ["Apple", "Banana", "Tea", "Coffee"],
+  checkList2: [
+    <p>In-person on election day.</p>,
+    <p>By mail - <a href="/" target="_blank" rel="noopener noreferrer">Request your absentee ballot.</a></p>
+  ],
+  checkList3: [
+    <><p>Check the location of your polling place <a href="/" target="_blank" rel="noopener noreferrer">here.</a></p><p className="red-text small">Polls are open from 6 a.m. to 7 p.m. If you're in line when your polling location closes, you are still allowed to vote. Stay in line!</p></>]
 }
 

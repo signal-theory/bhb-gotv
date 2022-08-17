@@ -1,0 +1,66 @@
+.important-dates h1 {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media("<=desktop") {
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  img {
+    max-width: 129px;
+    width: calc(4vw + 80px);
+    margin-left: 20px;
+  }
+}
+
+.dates-wrapper {
+  width: 90vw;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.dates-header {
+  text-align: center;
+
+  p {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  img {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+}
+
+.dates-content {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  gap: 0;
+  margin: 2rem 0 0;
+
+  .column.h3 {
+    font-family: $display;
+    color: $primaryRed;
+    margin: 2rem 0;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .column.h4 {
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    font-size: 22px;
+    line-height: 30px;
+
+    &:first-of-type {
+      background-color: $primaryYellow;
+      border-radius: 20rem;
+    }
+  }
+}

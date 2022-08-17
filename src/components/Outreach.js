@@ -40,14 +40,14 @@ const Outreach = () => {
           <div className="outreach-calendar">
             {outreachData.calendar.map((item) => (
               <>
-                <div className="column c1">
+                <div className="column c1" key={item.id}>
                   <h2>{item.date}</h2>
                 </div>
-                <div className="column c2">
+                <div className="column c2" key={item.id}>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
                 </div>
-                <div className="column c3">
+                <div className="column c3" key={item.id}>
                   <h3>{item.location}</h3>
                   <p>{item.directions}</p>
                 </div>
