@@ -74,13 +74,5 @@ export const missouriData = {
   ],
   headingChecklist: "My 2022 Voting Plan Checklist",
   paragraphChecklist:
-    "Complete the checklist to ensure you have everything you need to vote successfully.",
-  checklist: ["Apple", "Banana", "Tea", "Coffee"],
-  checkList2: [
-    <p>In-person on election day.</p>,
-    <p>By mail - <a href="/" target="_blank" rel="noopener noreferrer">Request your absentee ballot.</a></p>
-  ],
-  checkList3: [
-    <><p>Check the location of your polling place <a href="/" target="_blank" rel="noopener noreferrer">here.</a></p><p className="red-text small">Polls are open from 6 a.m. to 7 p.m. If you're in line when your polling location closes, you are still allowed to vote. Stay in line!</p></>]
+    "Complete the checklist to ensure you have everything you need to vote successfully."
 }
-

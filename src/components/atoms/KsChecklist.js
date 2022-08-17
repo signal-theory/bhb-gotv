@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import Fade from "react-reveal/Fade"
-import { missouriData } from "../../data-missouri"
+import { kansasData } from "../../data-kansas"
 
-const MoChecklist = () => {
+const KsChecklist = () => {
 
   const [permission0, setPermission0] = useState(false);
   const [permission1, setPermission1] = useState(false);
@@ -16,15 +16,18 @@ const MoChecklist = () => {
   const [permission9, setPermission9] = useState(false);
   const [permission10, setPermission10] = useState(false);
   const [permission11, setPermission11] = useState(false);
+  const [permission12, setPermission12] = useState(false);
+  const [permission13, setPermission13] = useState(false);
+  const [permission14, setPermission14] = useState(false);
 
   return (
     <>
       <div className="section checklist secondary-blue">
         <div className="checklist-wrapper">
           <Fade>
-            <h1 className="white-text">{missouriData.headingChecklist}</h1>
+            <h1 className="white-text">{kansasData.headingChecklist}</h1>
           </Fade>
-          <p className="white-text">{missouriData.paragraphChecklist}</p>
+          <p className="white-text">{kansasData.paragraphChecklist}</p>
         </div>
       </div>
       <form>
@@ -59,7 +62,7 @@ const MoChecklist = () => {
                   onChange={e => setPermission2(e.target.checked)}
                 />
                 <label className={permission2 ? "checked-item" : null}>
-                  I have researched the <a href="/" target="_blank" rel="noopener noreferrer">rules and regulations</a> around voting in Missouri.</label>
+                  I have researched the <a href="/" target="_blank" rel="noopener noreferrer">rules and regulations</a> around voting in Kansas.</label>
               </div>
 
               <h4>I plan on voting via:</h4>
@@ -81,7 +84,17 @@ const MoChecklist = () => {
                   onChange={e => setPermission4(e.target.checked)}
                 />
                 <label className={permission4 ? "checked-item" : null}>
-                  By mail - <a href="/" target="_blank" rel="noopener noreferrer">Request your absentee ballot.</a></label>
+                  By mail - <a href="/" target="_blank" rel="noopener noreferrer">Request your absentee ballot</a> <strong>or</strong></label>
+              </div>
+              <div className="checkbox">
+                <input
+                  type="radio"
+                  name="voteplan"
+                  checked={permission4}
+                  onChange={e => setPermission4(e.target.checked)}
+                />
+                <label className={permission4 ? "checked-item" : null}>
+                  Early Voting - <a href="/" target="_blank" rel="noopener noreferrer">Find early voting locations.</a></label>
               </div>
 
               <h2>My Polling Place</h2>
@@ -93,7 +106,7 @@ const MoChecklist = () => {
                 />
                 <label className={permission5 ? "checked-item" : null}>
                   Check the location of your polling place <a href="/" target="_blank" rel="noopener noreferrer">here.</a><br />
-                  <span className="red-text small">Polls are open from 6 a.m. to 7 p.m. If you're in line when your polling location closes, you are still allowed to vote. Stay in line!</span>
+                  <span className="red-text small">Polls are open from 7 a.m. to 7 p.m., but counties have discretion to open earlier or close later. If you're in line when your polling location closes, you are still allowed to vote. Stay in line!</span>
                 </label>
               </div>
               <div className="inputtext">
@@ -103,7 +116,7 @@ const MoChecklist = () => {
             </div>
             <div className="column">
               <h2>Day-of Checklist</h2>
-              <h3 className="red-text">Missouri requires Voter ID. <br />These are all acceptable forms of identification:</h3>
+              <h3 className="red-text">kansas requires Voter ID. <br />These are all acceptable forms of identification:</h3>
               <div className="checkbox">
                 <input
                   type="radio"
@@ -134,7 +147,7 @@ const MoChecklist = () => {
                   onChange={e => setPermission8(e.target.checked)}
                 />
                 <label className={permission8 ? "checked-item" : null}>
-                  Identification from a university, college, vocational and technical school <strong>or</strong>
+                  Military ID <strong>or</strong>
                 </label>
               </div>
               <div className="checkbox">
@@ -156,17 +169,50 @@ const MoChecklist = () => {
                   onChange={e => setPermission10(e.target.checked)}
                 />
                 <label className={permission10 ? "checked-item" : null}>
-                  A current utility bill, bank statement, paycheck, government check or other government document containing your name and address.
+                  ID card issued by a Native American tribe <strong>or</strong>
+                </label>
+              </div>
+              <div className="checkbox">
+                <input
+                  type="radio"
+                  name="dayof"
+                  checked={permission11}
+                  onChange={e => setPermission11(e.target.checked)}
+                />
+                <label className={permission11 ? "checked-item" : null}>
+                  Employee badge or ID issued by a government office <strong>or</strong>
+                </label>
+              </div>
+              <div className="checkbox">
+                <input
+                  type="radio"
+                  name="dayof"
+                  checked={permission12}
+                  onChange={e => setPermission12(e.target.checked)}
+                />
+                <label className={permission12 ? "checked-item" : null}>
+                  Identification from an accredited postsecondary education institution in Kansas <strong>or</strong>
+                </label>
+              </div>
+              <div className="checkbox">
+                <input
+                  type="radio"
+                  name="dayof"
+                  checked={permission13}
+                  onChange={e => setPermission13(e.target.checked)}
+                />
+                <label className={permission13 ? "checked-item" : null}>
+                  Public assistance ID card issued by a government office.
                 </label>
               </div>
               <h2>Spread the Word</h2>
               <div className="checkbox">
                 <input
                   type="checkbox"
-                  checked={permission11}
-                  onChange={e => setPermission11(e.target.checked)}
+                  checked={permission14}
+                  onChange={e => setPermission14(e.target.checked)}
                 />
-                <label className={permission11 ? "checked-item" : null}>
+                <label className={permission14 ? "checked-item" : null}>
                   Reach out to three friends or family members to help create a voting and/or carpool plan.
                 </label>
               </div>
@@ -178,4 +224,4 @@ const MoChecklist = () => {
   )
 }
 
-export default MoChecklist
+export default KsChecklist

@@ -75,6 +75,8 @@ export const kansasData = {
       title: "I moved to a new address, can I vote?",
       description: <p>Lorem Ipsum</p>,
     }
-  ]
+  ],
+  headingChecklist: "My 2022 Voting Plan Checklist",
+  paragraphChecklist:
+    "Complete the checklist to ensure you have everything you need to vote successfully."
 }
-

@@ -59,6 +59,7 @@
   h3 {
     font-size: 20px;
     margin: 0 0 1rem;
+    line-height: 1.5;
   }
 
   .checkbox {
@@ -66,7 +67,8 @@
     align-items: flex-start;
   }
 
-  input[type="checkbox"] {
+  input[type="checkbox"],
+  input[type="radio"] {
     flex: 0 0 24px;
     box-sizing: border-box;
     position: relative;
@@ -117,10 +119,10 @@
     padding: 0 3rem 0 0.5rem;
     user-select: none;
 
-    &.checked-item {
-      text-decoration: line-through;
-      color: gray;
-    }
+    // &.checked-item {
+    //   text-decoration: line-through;
+    //   color: gray;
+    // }
 
     p {
       margin: 0;
@@ -132,6 +134,31 @@
       text-decoration: none;
     }
 
+  }
+
+
+  .inputtext {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin: 0 0 5px;
+    }
+
+    input[type="text"],
+    textarea {
+      font-size: 16px;
+      font-family: $sans;
+      font-weight: bold;
+      width: 80%;
+      box-sizing: border-box;
+      padding: 8px 10px;
+      color: $primaryBlue;
+      border: 1px solid gray;
+      border-radius: 4px;
+      appearance: none;
+      outline: 0;
+    }
   }
 
 }

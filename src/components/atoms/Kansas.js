@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Fade from "react-reveal/Fade"
 import { kansasData } from "../../data-kansas"
 import ksIcon from "../../images/kansas-icon.svg"
-import Checklist from "../Checklist"
+import KsChecklist from "./KsChecklist"
 
 const Kansas = () => {
   const [toggled, setToggled] = useState(false)
@@ -67,7 +67,7 @@ const Kansas = () => {
           ))}
         </div>
       </div>
-      <Checklist />
+      <KsChecklist />
     </>
   )
 }
