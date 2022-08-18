@@ -30,7 +30,7 @@
 
     .accordion-panel {
       transition: all .3s ease-in-out;
-      padding: 1rem 2rem;
+      padding: 0.5rem 2rem 1.5rem;
       box-sizing: border-box;
 
       &.closed {
@@ -41,6 +41,7 @@
       &.open {
         position: relative;
         opacity: 1;
+        padding: 1rem 2rem;
       }
 
       p {

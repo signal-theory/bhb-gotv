@@ -1,8 +1,6 @@
 import React from "react"
 import Tabs from "./atoms/Tabs"
-// import { Fade } from "react-awesome-reveal"
-// import { Pulse } from "react-awesome-reveal"
-// import { Jump } from "react-awesome-reveal"
+import { Fade, AttentionSeeker } from "react-awesome-reveal"
 //https://www.npmjs.com/package/react-reveal
 //import scrollTo from "gatsby-plugin-smoothscroll"
 import { headerData } from "../data-header"
@@ -15,28 +13,26 @@ const Header = () => {
       <div className="header primary-yellow" id="header">
         <div className="container">
           <div className="header-wrapper">
-            {/* <Pulse> */}
-            <VoteLogo />
-            {/* </Pulse> */}
-            {/* <Fade bottom> */}
-            <p>
-              {headerData.titlename}
-            </p>
-            {/* </Fade> */}
-            {/* <Fade bottom> */}
-            <p className="bold">
-              {headerData.headername}
-            </p>
-            {/* </Fade> */}
-            {/* <Jump> */}
-            <p className="bold arrow">
-              {headerData.headerParagraph}
-              <img src={headerData.arrowImg} alt="down arrow" width={31} />
-            </p>
-            {/* </Jump> */}
-            {/* <Fade> */}
-            <img className="sticker" src={headerData.stickerImg} alt="Babes Helpin Babes at Signal Theory" width={200} />
-            {/* </Fade> */}
+            <AttentionSeeker effect="pulse" duration={2000}>
+              <VoteLogo />
+            </AttentionSeeker>
+            <Fade duration={500} direction="down">
+              <p>
+                {headerData.titlename}
+              </p>
+              <p className="bold">
+                {headerData.headername}
+              </p>
+            </Fade>
+            <AttentionSeeker effect="tada" delay={100} duration={2000} triggerOnce>
+              <p className="bold arrow">
+                {headerData.headerParagraph}
+                <img src={headerData.arrowImg} alt="down arrow" width={31} />
+              </p>
+            </AttentionSeeker>
+            <Fade>
+              <img className="sticker" src={headerData.stickerImg} alt="Babes Helpin Babes at Signal Theory" width={200} />
+            </Fade>
           </div>
         </div>
       </div>

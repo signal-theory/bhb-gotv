@@ -1,29 +1,16 @@
 import React, { useState } from "react"
-// import { Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import { missouriData } from "../../data-missouri"
 
 const MoChecklist = () => {
-
-  const [permission0, setPermission0] = useState(false);
-  const [permission1, setPermission1] = useState(false);
-  const [permission2, setPermission2] = useState(false);
-  const [permission3, setPermission3] = useState(false);
-  const [permission4, setPermission4] = useState(false);
-  const [permission5, setPermission5] = useState(false);
-  const [permission6, setPermission6] = useState(false);
-  const [permission7, setPermission7] = useState(false);
-  const [permission8, setPermission8] = useState(false);
-  const [permission9, setPermission9] = useState(false);
-  const [permission10, setPermission10] = useState(false);
-  const [permission11, setPermission11] = useState(false);
 
   return (
     <>
       <div className="section checklist secondary-blue">
         <div className="checklist-wrapper">
-          {/* <Fade> */}
-          <h1 className="white-text">{missouriData.headingChecklist}</h1>
-          {/* </Fade> */}
+          <Fade>
+            <h1 className="white-text">{missouriData.headingChecklist}</h1>
+          </Fade>
           <p className="white-text">{missouriData.paragraphChecklist}</p>
         </div>
       </div>
@@ -34,146 +21,129 @@ const MoChecklist = () => {
               <h2>Before Election Day</h2>
               <h3 className="red-text">
                 Election day is November 8, 2022.</h3>
-              <div className="checkbox">
+              <label className={`checkbox`} for="check_registration">
                 <input
                   type="checkbox"
-                  checked={permission0}
-                  onChange={e => setPermission0(e.target.checked)}
+                  value="check_registration"
+                  id="check_registration"
                 />
-                <label className={permission0 ? "checked-item" : null}>
-                  Check voter registration <a href="/" target="_blank" rel="noopener noreferrer">here.</a></label>
-              </div>
-              <div className="checkbox">
+                <p>Check voter registration <a href="/" target="_blank" rel="noopener noreferrer">here.</a></p>
+              </label>
+              <label className={`red-text checkbox`} for="register_here">
                 <input
                   type="checkbox"
-                  checked={permission1}
-                  onChange={e => setPermission1(e.target.checked)}
+                  value="register_here"
+                  id="register_here"
                 />
-                <label className={`red-text ${permission1 ? "checked-item" : null}`}>
-                  Register to vote <a href="/" target="_blank" rel="noopener noreferrer">here.</a></label>
-              </div>
-              <div className="checkbox">
+                <p>Register to vote <a href="/" target="_blank" rel="noopener noreferrer">here.</a></p>
+              </label>
+              <label className={`checkbox`} for="research_rules">
                 <input
                   type="checkbox"
-                  checked={permission2}
-                  onChange={e => setPermission2(e.target.checked)}
+                  value="research_rules"
+                  id="research_rules"
                 />
-                <label className={permission2 ? "checked-item" : null}>
-                  I have researched the <a href="/" target="_blank" rel="noopener noreferrer">rules and regulations</a> around voting in Missouri.</label>
-              </div>
+                <p>I have researched the <a href="/" target="_blank" rel="noopener noreferrer">rules and regulations</a> around voting in Missouri.</p>
+              </label>
+
 
               <h4>I plan on voting via:</h4>
-              <div className="checkbox">
+              <label className={`checkbox`} for="vote_inperson">
                 <input
                   type="radio"
                   name="voteplan"
-                  checked={permission3}
-                  onChange={e => setPermission3(e.target.checked)}
+                  value="vote_inperson"
+                  id="vote_inperson"
                 />
-                <label className={permission3 ? "checked-item" : null}>
-                  In-person on election day <strong>or</strong></label>
-              </div>
-              <div className="checkbox">
+                <p>In-person on election day <strong>or</strong></p>
+              </label>
+              <label className={`checkbox`} for="vote_bymail">
                 <input
                   type="radio"
                   name="voteplan"
-                  checked={permission4}
-                  onChange={e => setPermission4(e.target.checked)}
+                  value="vote_bymail"
+                  id="vote_bymail"
                 />
-                <label className={permission4 ? "checked-item" : null}>
-                  By mail - <a href="/" target="_blank" rel="noopener noreferrer">Request your absentee ballot.</a></label>
-              </div>
+                <p>By mail - <a href="/" target="_blank" rel="noopener noreferrer">Request your absentee ballot</a> <strong>or</strong></p>
+              </label>
+
 
               <h2>My Polling Place</h2>
-              <div className="checkbox">
+              <label className={`checkbox`} for="check_place">
                 <input
                   type="checkbox"
-                  checked={permission5}
-                  onChange={e => setPermission5(e.target.checked)}
+                  value="check_place"
+                  id="check_place"
                 />
-                <label className={permission5 ? "checked-item" : null}>
-                  Check the location of your polling place <a href="/" target="_blank" rel="noopener noreferrer">here.</a><br />
-                  <span className="red-text small">Polls are open from 6 a.m. to 7 p.m. If you're in line when your polling location closes, you are still allowed to vote. Stay in line!</span>
-                </label>
-              </div>
-              <div className="inputtext">
-                <label>My polling place is located at:</label>
-                <textarea placeholder="Enter address"></textarea>
-              </div>
+                <p>Check the location of your polling place <a href="/" target="_blank" rel="noopener noreferrer">here.</a><br />
+                  <span className="red-text small">Polls are open from 6 a.m. to 7 p.m. If you're in line when your polling location closes, you are still allowed to vote. Stay in line!</span></p>
+              </label>
+              <label className="inputtext">My polling place is located at:
+                <textarea></textarea>
+              </label>
             </div>
             <div className="column">
               <h2>Day-of Checklist</h2>
               <h3 className="red-text">Missouri requires Voter ID. <br />These are all acceptable forms of identification:</h3>
-              <div className="checkbox">
+              <label className={`checkbox`} for="drivers_id">
                 <input
                   type="radio"
                   name="dayof"
-                  checked={permission6}
-                  onChange={e => setPermission6(e.target.checked)}
+                  value="drivers_id"
+                  id="drivers_id"
                 />
-                <label className={permission6 ? "checked-item" : null}>
-                  Driver's license <strong>or</strong>
-                </label>
-              </div>
-              <div className="checkbox">
+                <p>Driver's license <strong>or</strong></p>
+              </label>
+              <label className={`checkbox`} for="passport_id">
                 <input
                   type="radio"
                   name="dayof"
-                  checked={permission7}
-                  onChange={e => setPermission7(e.target.checked)}
+                  value="passport_id"
+                  id="passport_id"
                 />
-                <label className={permission7 ? "checked-item" : null}>
-                  Passport <strong>or</strong>
-                </label>
-              </div>
-              <div className="checkbox">
+                <p>Passport <strong>or</strong></p>
+              </label>
+              <label className={`checkbox`} for="education_id">
                 <input
                   type="radio"
                   name="dayof"
-                  checked={permission8}
-                  onChange={e => setPermission8(e.target.checked)}
+                  value="education_id"
+                  id="education_id"
                 />
-                <label className={permission8 ? "checked-item" : null}>
-                  Identification from a university, college, vocational and technical school <strong>or</strong>
-                </label>
-              </div>
-              <div className="checkbox">
+                <p>Identification from a university, college, vocational and technical school <strong>or</strong></p>
+              </label>
+              <label className={`checkbox`} for="native_tribe_id">
                 <input
                   type="radio"
                   name="dayof"
-                  checked={permission9}
-                  onChange={e => setPermission9(e.target.checked)}
+                  value="native_tribe_id"
+                  id="native_tribe_id"
                 />
-                <label className={permission9 ? "checked-item" : null}>
-                  Identification issued by a local election authority <strong>or</strong>
-                </label>
-              </div>
-              <div className="checkbox">
+                <p>Identification issued by a local election authority <strong>or</strong></p>
+              </label>
+              <label className={`checkbox`} for="bill_id">
                 <input
                   type="radio"
                   name="dayof"
-                  checked={permission10}
-                  onChange={e => setPermission10(e.target.checked)}
+                  value="bill_id"
+                  id="bill_id"
                 />
-                <label className={permission10 ? "checked-item" : null}>
-                  A current utility bill, bank statement, paycheck, government check or other government document containing your name and address.
-                </label>
-              </div>
+                <p>A current utility bill, bank statement, paycheck, government check or other government document containing your name and address.</p>
+              </label>
+
               <h2>Spread the Word</h2>
-              <div className="checkbox">
+              <label className={`checkbox`} for="reach_out">
                 <input
                   type="checkbox"
-                  checked={permission11}
-                  onChange={e => setPermission11(e.target.checked)}
+                  value="reach_out"
+                  id="reach_out"
                 />
-                <label className={permission11 ? "checked-item" : null}>
-                  Reach out to three friends or family members to help create a voting and/or carpool plan.
-                </label>
-              </div>
+                <p>Reach out to three friends or family members to help create a voting and/or carpool plan.</p>
+              </label>
             </div>
           </div>
-        </div>
-      </form>
+        </div >
+      </form >
     </>
   )
 }

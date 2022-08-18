@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import { Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import { missouriData } from "../../data-missouri"
 import moIcon from "../../images/missouri-icon.svg"
 import MoChecklist from "./MoChecklist"
@@ -16,9 +16,9 @@ const Missouri = () => {
   return (
     <>
       <div className="section registration-links">
-        {/* <Fade> */}
-        <h1>{missouriData.heading}</h1>
-        {/* </Fade> */}
+        <Fade>
+          <h1>{missouriData.heading}</h1>
+        </Fade>
         <div className="links-wrapper">
           {missouriData.links.map((link, index) => (
             <a
@@ -33,9 +33,9 @@ const Missouri = () => {
         </div>
       </div>
       <div className="section important-dates pink">
-        {/* <Fade> */}
-        <h1>{missouriData.headingDates}<img src={moIcon} alt="missouri state icon" /></h1>
-        {/* </Fade> */}
+        <Fade>
+          <h1>{missouriData.headingDates}<img src={moIcon} alt="missouri state icon" /></h1>
+        </Fade>
         <div className="dates-wrapper">
           <div className="dates-content">
             {missouriData.dates.map((date) => (
@@ -52,9 +52,9 @@ const Missouri = () => {
         </div>
       </div>
       <div className="section faqs primary-yellow">
-        {/* <Fade> */}
-        <h1>{missouriData.headingFAQs}</h1>
-        {/* </Fade> */}
+        <Fade>
+          <h1>{missouriData.headingFAQs}</h1>
+        </Fade>
         <div class="accordion-wrapper">
           {missouriData.faqs.map((item, index) => (
             <div className="accordion-item">
