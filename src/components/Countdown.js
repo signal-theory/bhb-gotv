@@ -1,14 +1,14 @@
 import React from "react"
-import Fade from "react-reveal/Fade"
+// import { Fade } from "react-awesome-reveal";
 import { countdownData } from "../data-countdown"
 
 const Countdown = () => {
   return (
     <div className="section" id="countdown">
       <div className="countdown-container">
-        <Fade>
-          <h1>{countdownData.heading}</h1>
-        </Fade>
+        {/* <Fade> */}
+        <h1>{countdownData.heading}</h1>
+        {/* </Fade> */}
         <p>{countdownData.paragraph}</p>
       </div>
       <div className="countdown-container">

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Fade from "react-reveal/Fade"
+// import { Fade } from "react-awesome-reveal";
 import { kansasData } from "../../data-kansas"
 
 const KsChecklist = () => {
@@ -24,9 +24,9 @@ const KsChecklist = () => {
     <>
       <div className="section checklist secondary-blue">
         <div className="checklist-wrapper">
-          <Fade>
-            <h1 className="white-text">{kansasData.headingChecklist}</h1>
-          </Fade>
+          {/* <Fade> */}
+          <h1 className="white-text">{kansasData.headingChecklist}</h1>
+          {/* </Fade> */}
           <p className="white-text">{kansasData.paragraphChecklist}</p>
         </div>
       </div>

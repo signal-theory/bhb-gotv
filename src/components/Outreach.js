@@ -1,20 +1,20 @@
 import React from "react"
-import Fade from "react-reveal/Fade"
+// import { Fade } from "react-awesome-reveal";
 import { outreachData } from "../data-outreach"
 
 const Outreach = () => {
   return (
     <div className="section pink" id="outreach" tabIndex={-1}>
-      <Fade>
-        <img className="heart-sticker" src={outreachData.sticker} alt="vote heart sticker"></img>
-      </Fade>
+      {/* <Fade> */}
+      <img className="heart-sticker" src={outreachData.sticker} alt="vote heart sticker"></img>
+      {/* </Fade> */}
       <div className="container">
         <div className="outreach-wrapper">
           <div className="outreach-header">
             <p>{outreachData.heading}</p>
-            <Fade>
-              <img src={outreachData.image} alt="outreach"></img>
-            </Fade>
+            {/* <Fade> */}
+            <img src={outreachData.image} alt="outreach"></img>
+            {/* </Fade> */}
           </div>
           <div className="outreach-content">
             <div className="column">
@@ -34,9 +34,9 @@ const Outreach = () => {
               </p>
             </div>
           </div>
-          <Fade>
-            <h1>{outreachData.heading2}</h1>
-          </Fade>
+          {/* <Fade> */}
+          <h1>{outreachData.heading2}</h1>
+          {/* </Fade> */}
           <div className="outreach-calendar">
             {outreachData.calendar.map((item) => (
               <>

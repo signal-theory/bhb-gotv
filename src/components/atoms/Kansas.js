@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Fade from "react-reveal/Fade"
+// import { Fade } from "react-awesome-reveal";
 import { kansasData } from "../../data-kansas"
 import ksIcon from "../../images/kansas-icon.svg"
 import KsChecklist from "./KsChecklist"
@@ -15,9 +15,9 @@ const Kansas = () => {
   return (
     <>
       <div className="section registration-links">
-        <Fade>
-          <h1>{kansasData.heading}</h1>
-        </Fade>
+        {/* <Fade> */}
+        <h1>{kansasData.heading}</h1>
+        {/* </Fade> */}
         <div className="links-wrapper">
           {kansasData.links.map((link, index) => (
             <a
@@ -32,9 +32,9 @@ const Kansas = () => {
         </div>
       </div>
       <div className="section important-dates pink">
-        <Fade>
-          <h1>{kansasData.headingDates}<img src={ksIcon} alt="kansas state icon" /></h1>
-        </Fade>
+        {/* <Fade> */}
+        <h1>{kansasData.headingDates}<img src={ksIcon} alt="kansas state icon" /></h1>
+        {/* </Fade> */}
         <div className="dates-wrapper">
           <div className="dates-content">
             {kansasData.dates.map((date) => (
@@ -51,9 +51,9 @@ const Kansas = () => {
         </div>
       </div>
       <div className="section faqs primary-yellow">
-        <Fade>
-          <h1>{kansasData.headingFAQs}</h1>
-        </Fade>
+        {/* <Fade> */}
+        <h1>{kansasData.headingFAQs}</h1>
+        {/* </Fade> */}
         <div class="accordion-wrapper">
           {kansasData.faqs.map((item, index) => (
             <div className="accordion-item">
