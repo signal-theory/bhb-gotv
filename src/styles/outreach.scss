@@ -64,13 +64,22 @@
 
 .outreach-calendar {
   display: grid;
-  margin: 4rem auto 0;
+  margin: 2rem auto 0;
   grid-template-columns: repeat(1, 1fr);
   gap: 0 0;
 
+  h2 {
+    margin-top: 2rem;
+  }
+
   @include media(">=tablet") {
+    margin: 4rem auto 0;
     grid-template-columns: auto auto auto;
     gap: 0 0;
+
+    h2 {
+      margin-top: 0;
+    }
 
     .c1 {
       grid-column: 1 / span 3;
