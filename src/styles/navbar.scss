@@ -6,15 +6,15 @@
 }
 
 .navbar-wrapper {
-  padding: 2rem 0;
+  padding: 1.5rem 1rem 1.5rem;
   overflow: auto;
   white-space: nowrap;
   flex-wrap: nowrap;
 
   @include media(">=tablet") {
+    padding: 2rem 4rem;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2rem 4rem;
     width: calc(100vw - 10rem);
   }
 
@@ -72,6 +72,7 @@
   box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.25);
+  transform: rotate(6deg);
 
   @include media(">=tablet") {
     top: calc(99px - ((3.5vw + 65px)/1.5));
