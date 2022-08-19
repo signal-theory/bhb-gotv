@@ -10,7 +10,7 @@ import VoteLogo from './atoms/VoteYourHeartOut.js'
 const Header = () => {
   return (
     <>
-      <div className="header primary-yellow" id="header">
+      <header className="header primary-yellow" id="header">
         <div className="container">
           <div className="header-wrapper">
             <AttentionSeeker effect="pulse" duration={2000}>
@@ -35,10 +35,8 @@ const Header = () => {
             </Fade>
           </div>
         </div>
-      </div>
-      <div className="header-tabs" id="stateTabs">
-        <Tabs />
-      </div>
+      </header>
+      <Tabs />
     </>
   )
 }

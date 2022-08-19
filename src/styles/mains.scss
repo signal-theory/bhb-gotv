@@ -83,6 +83,11 @@ body {
   font-size: 18px;
 }
 
+button {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
 
 p {
   margin: 0.5rem 0;

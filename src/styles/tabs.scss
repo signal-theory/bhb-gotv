@@ -1,11 +1,31 @@
 .header-tabs {
   width: 100vw;
 
+  &.show-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+
+    .tabs {
+      background-color: transparent;
+    }
+  }
+
   .tabs {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-color: $primaryYellow;
   }
 
   .panels {
@@ -52,6 +72,105 @@
 
   @include media(">=tablet") {
     padding: 1rem 3rem;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// popup
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease-in-out;
+
+  &.show {
+    z-index: 999999;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .popup-inner {
+    position: relative;
+    padding: 4rem 32px;
+    width: calc(90% - 64px);
+    max-width: 680px;
+    background-color: $primaryBlue;
+    border-radius: 3rem;
+  }
+
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    span {
+      padding: 20px;
+    }
+  }
+}
+
+//sticky btn
+.sticky {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  width: 90px;
+  height: 90px;
+  background-color: $primaryBlue;
+  z-index: 99998;
+  cursor: pointer;
+}
+
+.popup-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary-btn {
+  margin: 0 1rem;
+  padding: 0.6rem 2rem;
+  background-color: $secondaryRed;
+  color: $primaryBlue;
+  border-radius: 10rem;
+  border: 4px solid white;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: $sans;
+  font-weight: bold;
+  cursor: pointer;
+
+  &.active {
+    position: relative;
+    z-index: 999;
+    transform: scale(1.1);
+  }
+
+  @include media(">=tablet") {
+    padding: 0.6rem 3.5rem;
   }
 
   &:hover {
