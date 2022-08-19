@@ -1,74 +1,68 @@
-.navbar-wrapper {
-  width: 100vw;
-  padding: 2rem 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.navbar {
   position: fixed;
-  top: 0;
-  background-color: $primaryYellow;
+  width: 100%;
   z-index: 9998;
+  background-color: $primaryYellow;
+}
+
+.navbar-wrapper {
+  padding: 2rem 0;
+  overflow: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
 
   @include media(">=tablet") {
     flex-direction: row;
     justify-content: space-between;
-    padding: 2rem 5rem;
+    padding: 2rem 4rem;
     width: calc(100vw - 10rem);
   }
 
 
-  .links-wrapper {
-    margin-left: 2rem;
+  button,
+  a {
+    display: inline-block;
+    text-decoration: none;
+    padding: .2rem 1rem;
+    font-family: $sans;
+    font-weight: 700;
+    font-size: 13px;
+    background-color: transparent;
+    outline: none;
+    border: 0px;
+    cursor: pointer;
+    color: $primaryBlue;
+    transition: all 0.2s ease-in-out;
 
-    @include media(">=desktop") {
-      margin-left: 0;
+    &:after {
+      content: '';
+      margin: 0.5rem auto 0;
+      width: 0;
+      height: 1px;
+      display: block;
+      background-color: $primaryBlue;
+      transition: width 0.4s ease;
     }
 
-    button,
-    a {
-      text-decoration: none;
-      padding: .2rem 1rem;
-      font-family: $sans;
-      font-weight: 700;
-      font-size: 13px;
-      background-color: transparent;
-      outline: none;
-      border: 0px;
-      cursor: pointer;
-      color: $primaryBlue;
-      transition: all 0.2s ease-in-out;
-
+    &:hover {
       &:after {
-        content: '';
-        margin: 0.5rem auto 0;
-        width: 0;
-        height: 1px;
-        display: block;
-        background-color: $primaryBlue;
-        transition: width 0.4s ease;
+        width: 100%;
       }
-
-      &:hover {
-        &:after {
-          width: 100%;
-        }
-      }
-    }
-
-    .active {
-      color: $primaryYellow;
     }
   }
 
+  .active {
+    color: $primaryYellow;
+  }
 }
 
 .countdown-sticker {
   z-index: 9999;
   position: fixed;
-  top: 2.3vw;
+  top: calc(99px - ((3.5vw + 65px)/2));
   right: 2vw;
-  width: 111px;
-  height: 111px;
+  width: calc(3.5vw + 65px);
+  height: calc(3.5vw + 65px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,16 +73,23 @@
   -webkit-box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.25);
 
+  @include media(">=tablet") {
+    top: calc(99px - ((3.5vw + 65px)/1.5));
+  }
+
   h2 {
     font-family: $display;
     color: $primaryRed;
     margin: 0.5rem auto 0;
-    font-size: 44px;
-    line-height: 38px;
+    font-size: calc(2vw + 22px);
+    line-height: calc(2vw + 18px);
   }
 
   span {
-    font-size: 10px;
+    display: block;
+    width: calc(3.5vw + 55px);
+    margin: 0 auto;
+    font-size: calc(0.3vw + 6px);
     font-weight: bold;
     text-align: center;
     color: $primaryRed;
