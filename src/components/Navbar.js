@@ -1,6 +1,15 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
 const Navbar = (props) => {
+  // COUNTDOWN
+  const countDownDate = new Date("Nov 8, 2022 7:00:00").getTime();
+  // Get today's date and time
+  const now = new Date().getTime();
+  // Find the distance between now and the count down date
+  const distance = countDownDate - now;
+  // Time calculations for days, hours, minutes and seconds
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
   return (
     <>
       <div className="navbar">
@@ -12,7 +21,7 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="countdown-sticker">
-        <h2>100</h2>
+        <h2>{days}</h2>
         <span>DAYS UNTIL ELECTION</span>
       </div>
     </>
