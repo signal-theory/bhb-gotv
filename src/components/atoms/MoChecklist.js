@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Fade } from "react-awesome-reveal";
 import { missouriData } from "../../data-missouri"
 
@@ -27,7 +27,7 @@ const MoChecklist = () => {
                   value="check_registration"
                   id="check_registration"
                 />
-                <p>Check voter registration <a href="/" target="_blank" rel="noopener noreferrer">here.</a></p>
+                <p>Check voter registration <a href="https://s1.sos.mo.gov/elections/voterlookup" target="_blank" rel="noopener noreferrer">here.</a></p>
               </label>
               <label className={`red-text checkbox`} for="register_here">
                 <input
@@ -35,7 +35,7 @@ const MoChecklist = () => {
                   value="register_here"
                   id="register_here"
                 />
-                <p>Register to vote <a href="/" target="_blank" rel="noopener noreferrer">here.</a></p>
+                <p>Register to vote <a href="https://s1.sos.mo.gov/elections/voterregistration/" target="_blank" rel="noopener noreferrer">here.</a></p>
               </label>
               <label className={`checkbox`} for="research_rules">
                 <input
@@ -43,7 +43,7 @@ const MoChecklist = () => {
                   value="research_rules"
                   id="research_rules"
                 />
-                <p>I have researched the <a href="/" target="_blank" rel="noopener noreferrer">rules and regulations</a> around voting in Missouri.</p>
+                <p>I have researched the <a href="https://www.sos.mo.gov/CMSImages/ElectionGoVoteMissouri//2021ElectionLaws_10.22.pdf" target="_blank" rel="noopener noreferrer">rules and regulations</a> around voting in Missouri.</p>
               </label>
 
 
@@ -64,7 +64,7 @@ const MoChecklist = () => {
                   value="vote_bymail"
                   id="vote_bymail"
                 />
-                <p>By mail - <a href="/" target="_blank" rel="noopener noreferrer">Request your absentee ballot</a> <strong>or</strong></p>
+                <p>By mail - <a href="https://www.sos.mo.gov/elections/goVoteMissouri/howtovote#absentee" target="_blank" rel="noopener noreferrer">Request your absentee ballot</a> <strong>or</strong></p>
               </label>
 
 
@@ -75,7 +75,7 @@ const MoChecklist = () => {
                   value="check_place"
                   id="check_place"
                 />
-                <p>Check the location of your polling place <a href="/" target="_blank" rel="noopener noreferrer">here.</a><br />
+                <p>Check the location of your polling place <a href="https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx" target="_blank" rel="noopener noreferrer">here.</a><br />
                   <span className="red-text small">Polls are open from 6 a.m. to 7 p.m. If you're in line when your polling location closes, you are still allowed to vote. Stay in line!</span></p>
               </label>
               <label className="inputtext">My polling place is located at:

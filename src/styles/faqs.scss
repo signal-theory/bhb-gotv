@@ -48,6 +48,21 @@
         font-size: 16px;
       }
 
+      a {
+        font-weight: bold;
+        color: inherit;
+
+        &:active,
+        &:visited,
+        &:focus {
+          color: inherit;
+        }
+
+        &:hover {
+          color: $secondaryBlue;
+        }
+      }
+
     }
   }
 }

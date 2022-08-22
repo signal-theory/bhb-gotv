@@ -8,14 +8,21 @@
     max-width: 400px;
     display: grid;
     margin: 4rem auto 0;
-    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
 
-    @include media(">=tablet") {
-      grid-template-columns: repeat(4, 1fr);
-      align-items: stretch;
-      justify-items: center;
-      max-width: 883px;
+    &.ks {
+      grid-template-columns: repeat(2, 1fr);
+
+      @include media(">=tablet") {
+        grid-template-columns: repeat(4, 1fr);
+        align-items: stretch;
+        max-width: 883px;
+      }
+    }
+
+    &.mo {
+      max-width: 650px;
     }
 
     a {

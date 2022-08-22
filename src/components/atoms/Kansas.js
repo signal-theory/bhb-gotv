@@ -13,12 +13,12 @@ const Kansas = () => {
     setToggled(index);
   }
   return (
-    <>
+    <div className="panels">
       <div className="section registration-links">
         <Fade>
           <h1>{kansasData.heading}</h1>
         </Fade>
-        <div className="links-wrapper">
+        <div className="links-wrapper ks">
           {kansasData.links.map((link, index) => (
             <a
               key={index}
@@ -50,7 +50,7 @@ const Kansas = () => {
           </div>
         </div>
       </div>
-      <div className="section faqs primary-yellow">
+      <div className="section faqs primary-yellow" id="faqs">
         <Fade>
           <h1>{kansasData.headingFAQs}</h1>
         </Fade>
@@ -65,10 +65,11 @@ const Kansas = () => {
               </div>
             </div>
           ))}
+          <div id="checklist"></div>
         </div>
       </div>
       <KsChecklist />
-    </>
+    </div>
   )
 }
 

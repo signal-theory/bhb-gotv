@@ -81,12 +81,25 @@
     p {
       margin: 0;
       flex: 1;
+
+      em {
+        font-weight: bold;
+      }
     }
 
     a {
       font-weight: bold;
       color: inherit;
-      text-decoration: none;
+
+      &:active,
+      &:visited,
+      &:focus {
+        color: inherit;
+      }
+
+      &:hover {
+        color: $secondaryBlue;
+      }
     }
 
   }

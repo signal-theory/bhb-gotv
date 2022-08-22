@@ -1,14 +1,14 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <>
       <div className="navbar">
         <div className="navbar-wrapper">
-          <button onClick={() => scrollTo("#work")} onKeyDown={() => scrollTo("#work")}>VOTING IN MISSOURI</button>
-          <button onClick={() => scrollTo("#about")} onKeyDown={() => scrollTo("#about")}>VOTING IN KANSAS</button>
-          <button onClick={() => scrollTo("#contact")} onKeyDown={() => scrollTo("#contact")}>FAQS</button>
-          <button onClick={() => scrollTo("#contact")} onKeyDown={() => scrollTo("#contact")}>BHB OUTREACH</button>
+          <button onClick={props.handleNav1} onKeyDown={props.handleNav1}>VOTING IN MISSOURI</button>
+          <button onClick={props.handleNav2} onKeyDown={props.handleNav2}>VOTING IN KANSAS</button>
+          <button onClick={props.handleNav3} onKeyDown={props.handleNav3}>FAQS</button>
+          <button onClick={() => scrollTo("#outreach")} onKeyDown={() => scrollTo("#outreach")}>BHB OUTREACH</button>
         </div>
       </div>
       <div className="countdown-sticker">

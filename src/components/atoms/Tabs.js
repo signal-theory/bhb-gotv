@@ -1,39 +1,27 @@
-import React, { useState } from 'react'
-import Missouri from './Missouri'
-import Kansas from './Kansas';
+import React from 'react'
 
 
-const Tabs = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const handleClick = (index) => setActiveIndex(index);
-  const checkActive = (index, className) => activeIndex === index ? className : "";
+const Tabs = (props) => {
 
   return (
     <>
       <div className="header-tabs" id="stateTabs">
         <div className="tabs">
           <button
-            className={`primary-btn ${checkActive(1, "active")}`}
-            onClick={() => handleClick(1)}
+            className={props.tabClass1}
+            onClick={props.handleState1}
           >
             MISSOURI
           </button>
           <button
-            className={`primary-btn ${checkActive(2, "active")}`}
-            onClick={() => handleClick(2)}
+            className={props.tabClass2}
+            onClick={props.handleState2}
           >
             KANSAS
           </button>
         </div>
-        <div className="panels">
-          <div className={`panel ${checkActive(1, "active")}`}>
-            <Missouri />
-          </div>
-          <div className={`panel ${checkActive(2, "active")}`}>
-            <Kansas />
-          </div>
-        </div>
       </div>
+
     </>
   )
 }

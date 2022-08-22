@@ -7,7 +7,7 @@ import { headerData } from "../data-header"
 import VoteLogo from './atoms/VoteYourHeartOut.js'
 
 
-const Header = () => {
+const Header = (props) => {
   return (
     <>
       <header className="header primary-yellow" id="header">
@@ -36,7 +36,12 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <Tabs />
+      <Tabs
+        tabClass1={props.tabClass1}
+        tabClass2={props.tabClass2}
+        handleState1={props.handleState1}
+        handleState2={props.handleState2}
+      />
     </>
   )
 }

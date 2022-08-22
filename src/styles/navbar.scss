@@ -1,7 +1,7 @@
 .navbar {
   position: fixed;
   width: 100%;
-  z-index: 9998;
+  z-index: 100000;
   background-color: $primaryYellow;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .countdown-sticker {
-  z-index: 9999;
+  z-index: 100000;
   position: fixed;
   top: calc(99px - ((3.5vw + 65px)/2));
   right: 2vw;

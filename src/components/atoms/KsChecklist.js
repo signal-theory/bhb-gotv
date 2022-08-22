@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Fade } from "react-awesome-reveal";
 import { kansasData } from "../../data-kansas"
 
@@ -27,7 +27,7 @@ const KsChecklist = () => {
                   value="check_registration"
                   id="check_registration"
                 />
-                <p>Check voter registration <a href="/" target="_blank" rel="noopener noreferrer">here.</a></p>
+                <p>Check voter registration <a href="https://myvoteinfo.voteks.org/voterview/" target="_blank" rel="noopener noreferrer">here.</a></p>
               </label>
               <label className={`red-text checkbox`} for="register_here">
                 <input
@@ -35,7 +35,7 @@ const KsChecklist = () => {
                   value="register_here"
                   id="register_here"
                 />
-                <p>Register to vote <a href="/" target="_blank" rel="noopener noreferrer">here.</a></p>
+                <p>Register to vote <a href="https://www.kdor.ks.gov/Apps/VoterReg" target="_blank" rel="noopener noreferrer">here.</a></p>
               </label>
               <label className={`checkbox`} for="research_rules">
                 <input
@@ -43,7 +43,7 @@ const KsChecklist = () => {
                   value="research_rules"
                   id="research_rules"
                 />
-                <p>I have researched the <a href="/" target="_blank" rel="noopener noreferrer">rules and regulations</a> around voting in Kansas.</p>
+                <p>I have researched the <a href="https://sos.ks.gov/elections/voter-information.html" target="_blank" rel="noopener noreferrer">rules and regulations</a> around voting in Kansas.</p>
               </label>
 
 
@@ -55,7 +55,7 @@ const KsChecklist = () => {
                   value="vote_inperson"
                   id="vote_inperson"
                 />
-                <p>In-person on election day <strong>or</strong></p>
+                <p>In-person on election day <em>or</em></p>
               </label>
               <label className={`checkbox`} for="vote_bymail">
                 <input
@@ -64,7 +64,7 @@ const KsChecklist = () => {
                   value="vote_bymail"
                   id="vote_bymail"
                 />
-                <p>By mail - <a href="/" target="_blank" rel="noopener noreferrer">Request your absentee ballot</a> <strong>or</strong></p>
+                <p>By mail - Request your advanced ballot <a href="https://www.sos.ks.gov/forms//elections/AV1.pdf" target="_blank" rel="noopener noreferrer">English</a>/<a href="https://www.sos.ks.gov/forms//elections/Spanish/AV1%20(Spanish).pdf" target="_blank" rel="noopener noreferrer">Español</a> <em>or</em></p>
               </label>
 
               <label className={`checkbox`} for="vote_early">
@@ -74,7 +74,7 @@ const KsChecklist = () => {
                   value="vote_early"
                   id="vote_early"
                 />
-                <p>Early Voting - <a href="/" target="_blank" rel="noopener noreferrer">Find early voting locations.</a></p>
+                <p>Early Voting - <a href="https://www.usvotefoundation.org/vote/eoddomestic.htm" target="_blank" rel="noopener noreferrer">Find early voting locations.</a></p>
               </label>
 
 
@@ -85,7 +85,7 @@ const KsChecklist = () => {
                   value="check_place"
                   id="check_place"
                 />
-                <p>Check the location of your polling place <a href="/" target="_blank" rel="noopener noreferrer">here.</a><br />
+                <p>Check the location of your polling place <a href="https://myvoteinfo.voteks.org/VoterView" target="_blank" rel="noopener noreferrer">here.</a><br />
                   <span className="red-text small">Polls are open from 7 a.m. to 7 p.m., but counties have discretion to open earlier or close later. If you're in line when your polling location closes, you are still allowed to vote. Stay in line!</span></p>
               </label>
               <label className="inputtext">My polling place is located at:
@@ -102,7 +102,7 @@ const KsChecklist = () => {
                   value="drivers_id"
                   id="drivers_id"
                 />
-                <p>Driver's license <strong>or</strong></p>
+                <p>Driver's license <em>or</em></p>
               </label>
               <label className={`checkbox`} for="passport_id">
                 <input
@@ -111,7 +111,7 @@ const KsChecklist = () => {
                   value="passport_id"
                   id="passport_id"
                 />
-                <p>Passport <strong>or</strong></p>
+                <p>Passport <em>or</em></p>
               </label>
               <label className={`checkbox`} for="military_id">
                 <input
@@ -120,7 +120,7 @@ const KsChecklist = () => {
                   value="military_id"
                   id="military_id"
                 />
-                <p>Military ID <strong>or</strong></p>
+                <p>Military ID <em>or</em></p>
               </label>
               <label className={`checkbox`} for="election_auth_id">
                 <input
@@ -129,7 +129,7 @@ const KsChecklist = () => {
                   value="election_auth_id"
                   id="election_auth_id"
                 />
-                <p>Identification issued by a local election authority <strong>or</strong></p>
+                <p>Identification issued by a local election authority <em>or</em></p>
               </label>
               <label className={`checkbox`} for="native_tribe_id">
                 <input
@@ -138,7 +138,7 @@ const KsChecklist = () => {
                   value="native_tribe_id"
                   id="native_tribe_id"
                 />
-                <p>ID card issued by a Native American tribe <strong>or</strong></p>
+                <p>ID card issued by a Native American tribe <em>or</em></p>
               </label>
               <label className={`checkbox`} for="employee_id">
                 <input
@@ -147,7 +147,7 @@ const KsChecklist = () => {
                   value="employee_id"
                   id="employee_id"
                 />
-                <p>Employee badge or ID issued by a government office <strong>or</strong></p>
+                <p>Employee badge or ID issued by a government office <em>or</em></p>
               </label>
               <label className={`checkbox`} for="education_id">
                 <input
@@ -156,7 +156,7 @@ const KsChecklist = () => {
                   value="education_id"
                   id="education_id"
                 />
-                <p>Identification from an accredited postsecondary education institution in Kansas <strong>or</strong></p>
+                <p>Identification from an accredited postsecondary education institution in Kansas <em>or</em></p>
               </label>
               <label className={`checkbox`} for="gov_id">
                 <input
