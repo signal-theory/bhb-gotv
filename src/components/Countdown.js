@@ -3,16 +3,21 @@ import { Fade } from "react-awesome-reveal"
 import { countdownData } from "../data-countdown"
 
 const Countdown = () => {
+
+
   // COUNTDOWN
   const countDownDate = new Date("Nov 8, 2022 7:00:00").getTime();
   // Get today's date and time
-  const now = new Date().getTime();
+  let now = new Date().getTime();
   // Find the distance between now and the count down date
   const distance = countDownDate - now;
-  // Time calculations for days, hours, minutes and seconds
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  // recalculate every sec
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+
+
   return (
     <div className="section" id="countdown">
       <div className="countdown-container">

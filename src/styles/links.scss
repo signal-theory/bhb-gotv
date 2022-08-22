@@ -27,7 +27,7 @@
 
     a {
       @include media(">=lgphone") {
-        min-width: 180px;
+        min-width: 150px;
       }
 
       display: block;
