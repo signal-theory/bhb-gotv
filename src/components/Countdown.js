@@ -1,21 +1,54 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Fade } from "react-awesome-reveal"
 import { countdownData } from "../data-countdown"
 
 const Countdown = () => {
 
+  // // COUNTDOWN
+  const calculateTimeLeft = () => {
+    let year = new Date().getFullYear();
+    const difference = +new Date(`${year}-11-8`) - +new Date();
+    let timeLeft = {};
+    let calcDays = Math.floor(difference / (1000 * 60 * 60 * 24));
+    let calcHours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    let calcMins = Math.floor((difference / 1000 / 60) % 60);
 
-  // COUNTDOWN
-  const countDownDate = new Date("Nov 8, 2022 7:00:00").getTime();
-  // Get today's date and time
-  let now = new Date().getTime();
-  // Find the distance between now and the count down date
-  const distance = countDownDate - now;
-  // recalculate every sec
-  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    if (difference > 0) {
+      timeLeft = {
+        days: calcDays < 10 ? "0" + calcDays : calcDays,
+        hours: calcHours < 10 ? "0" + calcHours : calcHours,
+        minutes: calcMins < 10 ? "0" + calcMins : calcMins,
+      };
+    }
 
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  //const [year] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+  });
+
+  const timerComponents = [];
+
+  Object.keys(timeLeft).forEach((interval) => {
+    if (!timeLeft[interval]) {
+      return;
+    }
+
+    timerComponents.push(
+      <>
+        <div className="time">
+          {timeLeft[interval]}
+        </div>
+        <div className="time colon">:</div>
+      </>
+    );
+  });
 
 
   return (
@@ -29,11 +62,7 @@ const Countdown = () => {
       <div className="countdown-container">
         <Fade direction="up" duration={500} triggerOnce>
           <div className="countdown ticker">
-            <div className="time">{days}</div>
-            <div className="time colon">:</div>
-            <div className="time">{hours}</div>
-            <div className="time colon">:</div>
-            <div className="time">{minutes}</div>
+            {timerComponents.length ? timerComponents : <span>Time's up!</span>}
           </div>
         </Fade>
         <Fade>
