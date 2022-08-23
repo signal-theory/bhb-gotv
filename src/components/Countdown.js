@@ -2,16 +2,21 @@ import React, { useEffect, useState } from "react"
 import { Fade } from "react-awesome-reveal"
 import { countdownData } from "../data-countdown"
 
+
 const Countdown = () => {
 
   // // COUNTDOWN
   const calculateTimeLeft = () => {
-    let year = new Date().getFullYear();
-    const difference = +new Date(`${year}-11-8`) - +new Date();
+    const differenceDST = +new Date(`2022-11-6`) - +new Date();
+    const difference = +new Date(`2022-11-8`) - +new Date();
     let timeLeft = {};
     let calcDays = Math.floor(difference / (1000 * 60 * 60 * 24));
     let calcHours = Math.floor((difference / (1000 * 60 * 60)) % 24);
     let calcMins = Math.floor((difference / 1000 / 60) % 60);
+
+    if (differenceDST > 0) {
+      calcHours = calcHours - 1;
+    };
 
     if (difference > 0) {
       timeLeft = {

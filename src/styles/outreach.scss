@@ -56,7 +56,7 @@
     }
 
     p {
-      font-size: 14px;
+      font-size: calc(0.1vw + 13px);
       line-height: 2;
     }
   }
@@ -110,7 +110,7 @@
     @include media(">=tablet") {
 
       p {
-        font-size: 14px;
+        font-size: calc(0.1vw + 13px);
         line-height: 2;
       }
     }

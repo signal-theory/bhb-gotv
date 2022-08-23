@@ -6,12 +6,10 @@ const Footer = (props) => {
     <div className="footer primary-blue" id="contact">
       <div className="container">
         <div className="footer-container">
-          <div className="footer-links">
-            <button onClick={props.handleFooterNav1} onKeyDown={props.handleFooterNav1}>FAQs</button>
-          </div>
           <div className="footer-logo">
             <img src={footerData.logo} alt="Babes Helpin' Babes at Signal Theory" />
           </div>
+          <div className="copyright">© 2022 Babes Helping Babes</div>
           <div className="social-icons">
             {footerData.social.map((socialLink, index) => (
               <a

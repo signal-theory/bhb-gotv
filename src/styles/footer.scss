@@ -18,8 +18,14 @@
   padding-top: 5vh;
   margin-bottom: 15vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @include media(">=tablet") {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .footer-links {
     flex-direction: column;
@@ -29,7 +35,7 @@
       background: transparent;
       display: block;
       color: white;
-      font-size: 14px;
+      font-size: calc(0.1vw + 13px);
       font-family: $sans;
       text-decoration: none;
       padding-bottom: 2rem;
@@ -42,7 +48,7 @@
 
   .footer-logo {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-grow: 1;
 
     img {
@@ -53,21 +59,36 @@
     }
   }
 
+  .copyright {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: calc(0.1vw + 11px);
+    line-height: 46px;
+    margin-right: 2rem;
+
+    @include media(">=tablet") {
+      justify-content: flex-end;
+    }
+  }
+
   .social-icons {
-    margin-top: 10px;
     display: flex;
 
     a {
       display: flex;
-      padding: 0 10px;
+      padding: 0;
       text-decoration: none;
       color: black;
       transition: opacity 0.2s ease-in-out;
 
-
       img {
         height: 1.667rem;
-        margin: 10px;
+        margin: 50px 40px 0 0;
+
+        @include media(">=tablet") {
+          margin: 0 10px;
+        }
       }
 
       &:hover {

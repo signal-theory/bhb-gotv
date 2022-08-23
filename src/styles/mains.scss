@@ -67,7 +67,6 @@ $display: 'recoletabold', sans-serif;
 @import "./dates.scss";
 @import "./faqs.scss";
 @import "./checklist.scss";
-@import "./skills.scss";
 @import "./countdown.scss";
 @import "./footer.scss";
 @import "./sticky.scss";
@@ -92,6 +91,7 @@ button {
 
 p {
   margin: 0.5rem 0;
+  font-size: calc(0.2vw + 15px);
 }
 
 h1 {
@@ -105,16 +105,16 @@ h1 {
 h2 {
   font-family: $sans;
   color: $primaryRed;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: calc(0.3vw + 18px);
+  line-height: 1.2;
   margin: 0 0 0.7rem;
 }
 
 h3 {
   font-family: $sans;
   color: $primaryBlue;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: calc(0.3vw + 18px);
+  line-height: 1.2;
   margin: 0 0 0.7rem;
 }
 

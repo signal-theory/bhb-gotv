@@ -9,6 +9,7 @@ const Navbar = (props) => {
   const distance = countDownDate - now;
   // Time calculations for days, hours, minutes and seconds
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const daysLeft = days < 10 ? "0" + days : days;
 
   return (
     <>
@@ -21,7 +22,7 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="countdown-sticker">
-        <h2>{days < 10 ? "0" + days : days}</h2>
+        <h2>{daysLeft}</h2>
         <span>DAYS UNTIL ELECTION</span>
       </div>
     </>

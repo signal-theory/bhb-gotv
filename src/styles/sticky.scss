@@ -70,17 +70,55 @@
 
   .popup-inner {
     position: relative;
-    padding: 5rem 32px;
-    width: calc(90% - 64px);
+    padding: 5rem 0;
+    margin: 0 1rem;
+    width: 100%;
     max-width: 680px;
     background-color: $primaryBlue;
     border-radius: 3rem;
 
     .popup-buttons {
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
       margin: 3rem auto 1rem;
+
+      @include media("<=tablet") {
+        flex-direction: column;
+        margin: 1rem 2rem;
+      }
+    }
+  }
+
+  .secondary-btn {
+    display: block;
+    margin: 1rem;
+    padding: 0.8rem 3.5rem;
+    background-color: $secondaryRed;
+    color: $primaryBlue;
+    border-radius: 10rem;
+    border: 4px solid white;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-size: calc(0.1vw + 13px);
+    font-family: $sans;
+    font-weight: bold;
+    cursor: pointer;
+
+    &.active {
+      position: relative;
+      z-index: 999;
+      transform: scale(1.1);
+    }
+
+    @include media("<tablet") {
+      padding: 1rem;
+      width: 100%;
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 
