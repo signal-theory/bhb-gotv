@@ -21,7 +21,7 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="countdown-sticker">
-        <h2>{days}</h2>
+        <h2>{days < 10 ? "0" + days : days}</h2>
         <span>DAYS UNTIL ELECTION</span>
       </div>
     </>
