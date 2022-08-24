@@ -7,7 +7,7 @@ const Sticky = (props) => {
         className={`sticky ${props.slideOutClass}`}
         onClick={props.handleStickyBtn}
         onKeyDown={props.handleStickyBtn}
-      ><span>MAKE A PLAN TO</span></button>
+      ><span>MAKE A PLAN TO VOTE</span></button>
       <div className={props.stickyClass}>
         <button
           className="close"

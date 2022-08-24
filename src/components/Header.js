@@ -26,7 +26,7 @@ const Header = (props) => {
             </Fade>
             <AttentionSeeker effect="tada" delay={100} duration={2000} triggerOnce>
               <p className="bold arrow">
-                {headerData.headerParagraph}
+                {props.yourStateHeadline}
                 <img src={headerData.arrowImg} alt="down arrow" width={31} />
               </p>
             </AttentionSeeker>

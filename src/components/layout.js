@@ -77,8 +77,10 @@ const Layout = ({ children }) => {
         handleNav1={() => handleNav(1)}
         handleNav2={() => handleNav(2)}
         handleNav3={() => handleFaq()}
+        handleNav4={() => handleStickyBtn()}
       ></Navbar>
       <Header
+        yourStateHeadline={activeIndex === 1 ? "YOUR STATE IS MISSOURI" : activeIndex === 2 ? "YOUR STATE IS KANSAS" : "SELECT YOUR STATE"}
         tabClass1={`primary-btn ${checkActive(1, "active")}`}
         tabClass2={`primary-btn ${checkActive(2, "active")}`}
         handleState1={() => handleClick(1)}
