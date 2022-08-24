@@ -15,13 +15,18 @@
     button.accordion-title {
       display: flex;
       width: 100%;
-      background-color: transparent;
+      background-size: 18px;
       border: none;
       appearance: none;
       cursor: pointer;
+      background: transparent url(../images/plus.svg) center right no-repeat;
+
+      &.active {
+        background: none;
+      }
 
       h3 {
-        margin: 0;
+        margin: 0 30px 0 0;
         font-size: 18px;
         text-align: left;
       }
@@ -30,7 +35,7 @@
 
     .accordion-panel {
       transition: all .3s ease-in-out;
-      padding: 0.5rem 2rem 1.5rem;
+      padding: 0.5rem 1rem 1.5rem;
       box-sizing: border-box;
 
       &.closed {
@@ -41,11 +46,12 @@
       &.open {
         position: relative;
         opacity: 1;
-        padding: 1rem 2rem;
+        padding: 1rem;
       }
 
       p {
         font-size: 16px;
+        padding: 0.25rem 1rem;
       }
 
       a {

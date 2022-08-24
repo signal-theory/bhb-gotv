@@ -93,6 +93,11 @@ button {
 p {
   margin: 0.5rem 0;
   font-size: calc(0.2vw + 15px);
+
+  &.highlight {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20rem;
+  }
 }
 
 a {

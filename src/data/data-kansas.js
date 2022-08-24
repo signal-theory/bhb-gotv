@@ -58,10 +58,10 @@ export const kansasData = {
     {
       title: "Is it too late to register to vote?",
       description: <>
-        <p>Election day in Kansas is November 8, 2022. <strong>You can register to vote right now</strong> <a href="https://www.kdor.ks.gov/Apps/VoterReg" target="_blank" rel="noopener noreferrer">here</a>.</p>
+        <p className="highlight">Election day in Kansas is November 8, 2022. <strong>You can register to vote right now</strong> <a href="https://www.kdor.ks.gov/Apps/VoterReg" target="_blank" rel="noopener noreferrer">here</a>.</p>
         <p><strong>Register by mail:</strong> Voter registration must be postmarked by 10/18/2022.</p><p><strong>Register in person:</strong> Voter registration must be received by 10/18/2022.</p>
-        <p>Request an Advaced Voting Ballot By Mail: <a href="https://www.sos.ks.gov/forms//elections/AV1.pdf" target="_blank" rel="noopener noreferrer">English</a>/<a href="https://www.sos.ks.gov/forms//elections/Spanish/AV1%20(Spanish).pdf" target="_blank" rel="noopener noreferrer">Español</a></p>
-        <p>Request your Advanced Voting Ballot by: 11/01/22</p><p><strong>Return your completed absentee ballot application by mail:</strong> Ballot must be received by 11/8/2022.</p>
+        <p>Request an Advanced Voting Ballot By Mail: <a href="https://www.sos.ks.gov/forms//elections/AV1.pdf" target="_blank" rel="noopener noreferrer">English</a>/<a href="https://www.sos.ks.gov/forms//elections/Spanish/AV1%20(Spanish).pdf" target="_blank" rel="noopener noreferrer">Español</a>, must be receieved by: 11/01/22</p>
+        <p><strong>Return your completed absentee ballot application by mail:</strong> Ballot must be received by 11/8/2022.</p>
         <p><strong>Return your completed absentee ballot application by hand:</strong> Ballot must be received by 11/08/2022.</p><p><strong>Return your completed ballot by mail:</strong> Ballot must be received by 11/08/2022.</p>
         <p><strong>Return your completed ballot by hand:</strong> Ballot must be received by 11/08/2022.</p></>,
     },
