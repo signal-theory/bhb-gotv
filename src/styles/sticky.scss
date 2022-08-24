@@ -123,7 +123,7 @@ button.sticky {
     &.active {
       position: relative;
       z-index: 999;
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
     &.hide {
@@ -136,7 +136,7 @@ button.sticky {
     }
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   }
 

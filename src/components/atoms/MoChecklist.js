@@ -142,6 +142,10 @@ const MoChecklist = () => {
               </label>
             </div>
           </div>
+          <div className="checklist-buttons section">
+            <button className="download-btn">DOWNLOAD CHECKLIST</button>
+            <button className="share-btn">SHARE</button>
+          </div>
         </div >
       </form >
     </>

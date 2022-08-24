@@ -17,17 +17,15 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Layout = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [slideOutClass, setSlideOutClass] = useState(false);
+  const [hideSlideOutClass, setSlideOutClass] = useState(false);
   const [activePopup, setActivePopup] = useState(false);
   const handleClick = (index) => setActiveIndex(index);
   const checkActive = (index, className) => activeIndex === index ? className : "";
   const [popupHeadline, setPopupHeadline] = useState("Choose Your State");
   const [popupOrigin, setPopupOrigin] = useState(0);
   useEffect(() => {
-    localStorage.setItem('myState', activeIndex);
-    const storageItems = localStorage.getItem('myState')
-    console.log("Local Storage Items: " + storageItems);
-    console.log("slideOutClass: " + slideOutClass);
+    console.log("Active Index: " + activeIndex);
+    console.log("hideSlideOutClass: " + hideSlideOutClass);
 
   });
   const handleNav = (index) => {
@@ -59,6 +57,7 @@ const Layout = ({ children }) => {
     scrollTo("#checklist");
     setActiveIndex(index);
     setSlideOutClass(true);
+    localStorage.setItem('myState', index);
     if (popupOrigin === 1) {
       setPopupHeadline("Make A Plan To Vote In")
     } if (popupOrigin === 2) {
@@ -94,14 +93,14 @@ const Layout = ({ children }) => {
       ></Footer>
       <Sticky
         popupHeadline={popupHeadline}
-        slideOutClass={slideOutClass === true ? "slideOut" : null}
+        slideOutClass={hideSlideOutClass === true ? "slideOut" : null}
         handleStickyBtn={() => handleStickyBtn()}
         stickyClass={activePopup ? "popup show" : "popup"}
         handleClose={() => handleClose()}
         handleSticky1={() => handleStickyState(1)}
         handleSticky2={() => handleStickyState(2)}
-        stateBtnClass={slideOutClass === true ? "hide" : null}
-        closeBtnClass={slideOutClass === true ? null : "hide"}
+        stateBtnClass={hideSlideOutClass === true ? "hide" : null}
+        closeBtnClass={hideSlideOutClass === true ? null : "hide"}
         myState={activeIndex === 1 ? "MISSOURI" : activeIndex === 2 ? "KANSAS" : null}
       />
 
