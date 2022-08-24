@@ -1,5 +1,5 @@
 import React from "react"
-import { footerData } from "../data-footer"
+import { footerData } from "../data/data-footer"
 
 const Footer = (props) => {
   return (

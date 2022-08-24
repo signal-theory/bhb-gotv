@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Fade } from "react-awesome-reveal";
-import { missouriData } from "../../data-missouri"
+import { missouriData } from "../../data/data-missouri"
 import moIcon from "../../images/missouri-icon.svg"
 import MoChecklist from "./MoChecklist"
 

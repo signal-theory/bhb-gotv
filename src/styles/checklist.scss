@@ -87,21 +87,6 @@
       }
     }
 
-    a {
-      font-weight: bold;
-      color: inherit;
-
-      &:active,
-      &:visited,
-      &:focus {
-        color: inherit;
-      }
-
-      &:hover {
-        color: $secondaryBlue;
-      }
-    }
-
   }
 
   input[type="checkbox"],

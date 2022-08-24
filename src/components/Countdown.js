@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Fade } from "react-awesome-reveal"
-import { countdownData } from "../data-countdown"
+import { countdownData } from "../data/data-countdown"
 
 
 const Countdown = () => {
@@ -30,7 +30,6 @@ const Countdown = () => {
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  //const [year] = useState(new Date().getFullYear());
 
   useEffect(() => {
     setTimeout(() => {

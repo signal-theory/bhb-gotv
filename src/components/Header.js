@@ -3,7 +3,7 @@ import Tabs from "./atoms/Tabs"
 import { Fade, AttentionSeeker } from "react-awesome-reveal"
 //https://www.npmjs.com/package/react-reveal
 //import scrollTo from "gatsby-plugin-smoothscroll"
-import { headerData } from "../data-header"
+import { headerData } from "../data/data-header"
 import VoteLogo from './atoms/VoteYourHeartOut.js'
 
 

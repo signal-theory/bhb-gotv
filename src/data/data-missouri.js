@@ -1,7 +1,7 @@
 import React from 'react'
-import BTN1 from "./images/btn-check-registration.svg"
-import BTN2 from "./images/btn-register-to-vote.svg"
-import BTN3 from "./images/btn-register-paper-english.svg"
+import BTN1 from "../images/btn-check-registration.svg"
+import BTN2 from "../images/btn-register-to-vote.svg"
+import BTN3 from "../images/btn-register-paper-english.svg"
 //import BTN4 from "./images/btn-register-paper-espanol.svg"
 //import FAQS_MO from "./components/atoms/VoteYourHeartOut.svg"
 

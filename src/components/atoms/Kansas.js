@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Fade } from "react-awesome-reveal";
-import { kansasData } from "../../data-kansas"
+import { kansasData } from "../../data/data-kansas"
 import ksIcon from "../../images/kansas-icon.svg"
 import KsChecklist from "./KsChecklist"
+
 
 const Kansas = () => {
   const [toggled, setToggled] = useState(false)
@@ -42,7 +43,7 @@ const Kansas = () => {
                 <h3 className="column h3" key={date.id}>
                   {date.date}
                 </h3>
-                <h4 className="column h4" key={date.id}>
+                <h4 className={`column h4 `} key={date.id}>
                   {date.title}
                 </h4>
               </>

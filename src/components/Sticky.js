@@ -4,9 +4,9 @@ const Sticky = (props) => {
   return (
     <>
       <button
-        className="sticky"
-        onClick={props.handleSticky}
-        onKeyDown={props.handleSticky}
+        className={`sticky ${props.slideOutClass}`}
+        onClick={props.handleStickyBtn}
+        onKeyDown={props.handleStickyBtn}
       ><span>MAKE A PLAN TO</span></button>
       <div className={props.stickyClass}>
         <button
@@ -15,16 +15,20 @@ const Sticky = (props) => {
           <span>&times;</span>
         </button>
         <div className="popup-inner">
-          <h1 className="white-text">Choose Your State</h1>
+          <h1 className="white-text">{props.popupHeadline}</h1>
           <div className="popup-buttons">
             <button
-              className="secondary-btn"
+              className={`secondary-btn ${props.stateBtnClass}`}
               onClick={props.handleSticky2}>
               KANSAS
             </button>
-            <button className="secondary-btn"
+            <button className={`secondary-btn ${props.stateBtnClass}`}
               onClick={props.handleSticky1}>
               MISSOURI
+            </button>
+            <button className={`secondary-btn ${props.closeBtnClass}`}
+              onClick={props.handleClose}>
+              {props.myState}
             </button>
           </div>
         </div>

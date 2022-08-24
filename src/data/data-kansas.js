@@ -1,8 +1,8 @@
 import React from 'react'
-import BTN1 from "./images/btn-check-registration.svg"
-import BTN2 from "./images/btn-register-to-vote.svg"
-import BTN3 from "./images/btn-register-paper-english.svg"
-import BTN4 from "./images/btn-register-paper-espanol.svg"
+import BTN1 from "../images/btn-check-registration.svg"
+import BTN2 from "../images/btn-register-to-vote.svg"
+import BTN3 from "../images/btn-register-paper-english.svg"
+import BTN4 from "../images/btn-register-paper-espanol.svg"
 //import FAQS_MO from "./components/atoms/VoteYourHeartOut.svg"
 
 
@@ -34,18 +34,22 @@ export const kansasData = {
   dates: [
     {
       date: 'OCT. 18',
+      formatDate: '818',
       title: "Last day to register to vote",
     },
     {
       date: 'NOV. 1',
+      formatDate: '1101',
       title: "Last day to mail out absentee ballot",
     },
     {
       date: 'NOV. 7',
+      formatDate: '1107',
       title: "Last day to vote absentee in person",
     },
     {
       date: 'NOV. 8',
+      formatDate: '1108',
       title: "Election day",
     },
   ],

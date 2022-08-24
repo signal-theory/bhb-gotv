@@ -1,6 +1,6 @@
 import React from "react"
 import { Fade } from "react-awesome-reveal";
-import { missouriData } from "../../data-missouri"
+import { missouriData } from "../../data/data-missouri"
 
 const MoChecklist = () => {
 
@@ -55,7 +55,7 @@ const MoChecklist = () => {
                   value="vote_inperson"
                   id="vote_inperson"
                 />
-                <p>In-person on election day <strong>or</strong></p>
+                <p>In-person on election day <em>or</em></p>
               </label>
               <label className={`checkbox`} for="vote_bymail">
                 <input
@@ -64,7 +64,7 @@ const MoChecklist = () => {
                   value="vote_bymail"
                   id="vote_bymail"
                 />
-                <p>By mail - <a href="https://www.sos.mo.gov/elections/goVoteMissouri/howtovote#absentee" target="_blank" rel="noopener noreferrer">Request your absentee ballot</a> <strong>or</strong></p>
+                <p>By mail - <a href="https://www.sos.mo.gov/elections/goVoteMissouri/howtovote#absentee" target="_blank" rel="noopener noreferrer">Request your absentee ballot</a> <em>or</em></p>
               </label>
 
 
@@ -92,7 +92,7 @@ const MoChecklist = () => {
                   value="drivers_id"
                   id="drivers_id"
                 />
-                <p>Driver's license <strong>or</strong></p>
+                <p>Driver's license <em>or</em></p>
               </label>
               <label className={`checkbox`} for="passport_id">
                 <input
@@ -101,7 +101,7 @@ const MoChecklist = () => {
                   value="passport_id"
                   id="passport_id"
                 />
-                <p>Passport <strong>or</strong></p>
+                <p>Passport <em>or</em></p>
               </label>
               <label className={`checkbox`} for="education_id">
                 <input
@@ -110,7 +110,7 @@ const MoChecklist = () => {
                   value="education_id"
                   id="education_id"
                 />
-                <p>Identification from a university, college, vocational and technical school <strong>or</strong></p>
+                <p>Identification from a university, college, vocational and technical school <em>or</em></p>
               </label>
               <label className={`checkbox`} for="native_tribe_id">
                 <input
@@ -119,7 +119,7 @@ const MoChecklist = () => {
                   value="native_tribe_id"
                   id="native_tribe_id"
                 />
-                <p>Identification issued by a local election authority <strong>or</strong></p>
+                <p>Identification issued by a local election authority <em>or</em></p>
               </label>
               <label className={`checkbox`} for="bill_id">
                 <input

@@ -1,6 +1,6 @@
 import React from "react"
 import { Fade } from "react-awesome-reveal";
-import { kansasData } from "../../data-kansas"
+import { kansasData } from "../../data/data-kansas"
 
 const KsChecklist = () => {
 

@@ -1,6 +1,6 @@
 import React from "react"
 import { Fade } from "react-awesome-reveal";
-import { outreachData } from "../data-outreach"
+import { outreachData } from "../data/data-outreach"
 
 const Outreach = () => {
   return (

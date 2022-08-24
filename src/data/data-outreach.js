@@ -1,7 +1,7 @@
 
 // images
-import babesLogos from "./images/BHBatST-logo.svg"
-import heartSticker from "./images/heart-sticker.svg"
+import babesLogos from "../images/BHBatST-logo.svg"
+import heartSticker from "../images/heart-sticker.svg"
 
 export const outreachData = {
   heading: "Website courtesy of:",

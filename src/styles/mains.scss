@@ -68,6 +68,7 @@ $display: 'recoletabold', sans-serif;
 @import "./faqs.scss";
 @import "./checklist.scss";
 @import "./countdown.scss";
+@import "./help.scss";
 @import "./footer.scss";
 @import "./sticky.scss";
 
@@ -92,6 +93,21 @@ button {
 p {
   margin: 0.5rem 0;
   font-size: calc(0.2vw + 15px);
+}
+
+a {
+  font-weight: bold;
+  color: inherit;
+
+  &:active,
+  &:visited,
+  &:focus {
+    color: inherit;
+  }
+
+  &:hover {
+    color: $secondaryBlue;
+  }
 }
 
 h1 {

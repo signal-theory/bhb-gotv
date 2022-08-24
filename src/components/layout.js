@@ -17,26 +17,59 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Layout = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [slideOutClass, setSlideOutClass] = useState(false);
+  const [activePopup, setActivePopup] = useState(false);
   const handleClick = (index) => setActiveIndex(index);
   const checkActive = (index, className) => activeIndex === index ? className : "";
+  const [popupHeadline, setPopupHeadline] = useState("Choose Your State");
+  const [popupOrigin, setPopupOrigin] = useState(0);
   useEffect(() => {
-    console.log("The activeIndex is " + activeIndex);
+    localStorage.setItem('myState', activeIndex);
+    const storageItems = localStorage.getItem('myState')
+    console.log("Local Storage Items: " + storageItems);
+    console.log("slideOutClass: " + slideOutClass);
+
   });
   const handleNav = (index) => {
     setActiveIndex(index);
     scrollTo("#stateTabs");
   };
-  const [activePopup, setActivePopup] = useState(false);
-  const handleSticky = () => {
-    activeIndex === 0 ? setActivePopup(!activePopup) : scrollTo("#checklist")
+  const handleStickyBtn = () => {
+    if (activeIndex === 0) {
+      setActivePopup(!activePopup);
+      setSlideOutClass(false)
+    } else {
+      scrollTo("#checklist");
+      setSlideOutClass(true);
+      setPopupOrigin(1);
+    }
+  };
+  const handleClose = () => {
+    setActivePopup(!activePopup);
+    setSlideOutClass(true);
+    if (popupOrigin === 1) {
+      scrollTo("#checklist");
+    } if (popupOrigin === 2) {
+      scrollTo("#faqs");
+    } if (popupOrigin === 0) {
+      scrollTo("#checklist");
+    }
   };
   const handleStickyState = (index) => {
-    setActivePopup(!activePopup);
-    setActiveIndex(index);
     scrollTo("#checklist");
+    setActiveIndex(index);
+    setSlideOutClass(true);
+    if (popupOrigin === 1) {
+      setPopupHeadline("Make A Plan To Vote In")
+    } if (popupOrigin === 2) {
+      setPopupHeadline("Read Election FAQs For")
+    } if (popupOrigin === 0) {
+      setPopupHeadline("Make A Plan To Vote In")
+    }
   };
   const handleFaq = () => {
-    activeIndex === 0 ? setActivePopup(!activePopup) : scrollTo("#faqs")
+    activeIndex === 0 ? setActivePopup(!activePopup) : scrollTo("#faqs");
+    setPopupOrigin(2);
   };
   return (
     <>
@@ -58,11 +91,16 @@ const Layout = ({ children }) => {
         handleFooterNav1={() => handleFaq()}
       ></Footer>
       <Sticky
-        handleSticky={() => handleSticky()}
+        popupHeadline={popupHeadline}
+        slideOutClass={slideOutClass === true ? "slideOut" : null}
+        handleStickyBtn={() => handleStickyBtn()}
         stickyClass={activePopup ? "popup show" : "popup"}
-        handleClose={() => handleSticky()}
+        handleClose={() => handleClose()}
         handleSticky1={() => handleStickyState(1)}
         handleSticky2={() => handleStickyState(2)}
+        stateBtnClass={slideOutClass === true ? "hide" : null}
+        closeBtnClass={slideOutClass === true ? null : "hide"}
+        myState={activeIndex === 1 ? "MISSOURI" : activeIndex === 2 ? "KANSAS" : null}
       />
 
     </>
