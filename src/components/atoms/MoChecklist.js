@@ -45,6 +45,14 @@ const MoChecklist = () => {
                 />
                 <p>I have researched the <a href="https://www.sos.mo.gov/CMSImages/ElectionGoVoteMissouri//2021ElectionLaws_10.22.pdf" target="_blank" rel="noopener noreferrer">rules and regulations</a> around voting in Missouri.</p>
               </label>
+              <label className={`checkbox`} for="research_rules">
+                <input
+                  type="checkbox"
+                  value="research_rules"
+                  id="research_rules"
+                />
+                <p>I have viewed my list of candidates with this <a href="https://ballotpedia.org/Missouri_Sample_Ballot" target="_blank" rel="noopener noreferrer">sample ballot lookup tool.</a></p>
+              </label>
 
 
               <h4>I plan on voting via:</h4>
