@@ -53,7 +53,7 @@ export const kansasData = {
       title: "Election day",
     },
   ],
-  headingFAQs: "FAQS",
+  headingFAQs: "Kansas FAQs",
   faqs: [
     {
       title: "Is it too late to register to vote?",

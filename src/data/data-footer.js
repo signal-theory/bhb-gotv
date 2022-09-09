@@ -10,12 +10,12 @@ export const footerData = {
     {
       img: instagramIcon,
       title: "Instagram",
-      url: "https://www.instagram.com/bhb",
+      url: "https://www.instagram.com/babeshelpinbabes_st/",
     },
     {
       img: facebookIcon,
       title: "Facebook",
-      url: "https://www.facebook.com/bhb",
+      url: "https://www.facebook.com/BabesHelpinBabesST",
     },
   ]
 }

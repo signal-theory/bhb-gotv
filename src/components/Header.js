@@ -30,6 +30,7 @@ const Header = (props) => {
                 <img src={headerData.arrowImg} alt="down arrow" width={31} />
               </p>
             </AttentionSeeker>
+            <div id="stateTabs"></div>
             <Fade>
               <img className="sticker" src={headerData.stickerImg} alt="Babes Helpin Babes at Signal Theory" width={200} />
             </Fade>

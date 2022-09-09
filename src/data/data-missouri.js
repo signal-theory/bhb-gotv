@@ -44,7 +44,7 @@ export const missouriData = {
       title: "Election day",
     },
   ],
-  headingFAQs: "FAQS",
+  headingFAQs: "Missouri FAQs",
   faqs: [
     {
       title: "Is it too late to register to vote?",

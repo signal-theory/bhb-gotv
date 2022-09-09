@@ -5,7 +5,7 @@ const Tabs = (props) => {
 
   return (
     <>
-      <div className="header-tabs" id="stateTabs">
+      <div className="header-tabs">
         <div className="tabs">
           <button
             className={props.tabClass1}
