@@ -17,8 +17,8 @@ const Navbar = (props) => {
         <div className="navbar-wrapper">
           <button onClick={props.handleNav1} onKeyDown={props.handleNav1}>VOTING IN MISSOURI</button>
           <button onClick={props.handleNav2} onKeyDown={props.handleNav2}>VOTING IN KANSAS</button>
-          <button onClick={props.handleNav3} onKeyDown={props.handleNav3}>FAQS</button>
-          <button onClick={props.handleNav4} onKeyDown={props.handleNav4}>MAKE A PLAN</button>
+          <button className={props.navBtnClass} onClick={() => scrollTo("#faqs")} onKeyDown={() => scrollTo("#faqs")}>FAQS</button>
+          <button className={props.navBtnClass} onClick={props.handleNav4} onKeyDown={props.handleNav4}>MAKE A PLAN</button>
           <button onClick={() => scrollTo("#outreach")} onKeyDown={() => scrollTo("#outreach")}>BHB OUTREACH</button>
           <button onClick={() => scrollTo("#help")} onKeyDown={() => scrollTo("#help")}>HELP</button>
         </div>

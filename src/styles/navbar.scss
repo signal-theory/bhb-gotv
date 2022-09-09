@@ -49,6 +49,13 @@
         width: 100%;
       }
     }
+
+    &.hide {
+      width: 0;
+      visibility: hidden;
+      opacity: 0;
+      padding: 0;
+    }
   }
 
   .active {

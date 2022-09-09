@@ -51,7 +51,16 @@
       display: block;
       position: absolute;
       left: 8%;
+      top: 68%;
+    }
+
+    @include media(">=mddesktop") {
+      left: 8%;
       top: 55%;
+    }
+
+    @include media(">=lgdesktop") {
+      left: 10%;
     }
   }
 }

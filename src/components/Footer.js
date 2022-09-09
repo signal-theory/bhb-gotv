@@ -1,7 +1,7 @@
 import React from "react"
 import { footerData } from "../data/data-footer"
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <div className="footer primary-blue" id="contact">
       <div className="container">

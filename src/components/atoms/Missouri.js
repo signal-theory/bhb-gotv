@@ -4,7 +4,7 @@ import { missouriData } from "../../data/data-missouri"
 import moIcon from "../../images/missouri-icon.svg"
 import MoChecklist from "./MoChecklist"
 
-const Missouri = () => {
+const Missouri = (props) => {
   //const today = new Date(Date.now());
   const [toggled, setToggled] = useState(false)
   const toggleAccordion = (index) => {
@@ -13,6 +13,7 @@ const Missouri = () => {
     }
     setToggled(index);
   }
+
   return (
     <div className="panels">
       <div className="section registration-links">
@@ -66,7 +67,7 @@ const Missouri = () => {
               </div>
             </div>
           ))}
-          <div id="checklist"></div>
+          <div id="checklist">hello: {props.scrollPosition}</div>
         </div>
       </div>
       <MoChecklist />
