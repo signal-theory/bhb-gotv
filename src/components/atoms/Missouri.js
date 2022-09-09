@@ -67,7 +67,7 @@ const Missouri = (props) => {
               </div>
             </div>
           ))}
-          <div id="checklist">hello: {props.scrollPosition}</div>
+          <div id="checklist"></div>
         </div>
       </div>
       <MoChecklist />

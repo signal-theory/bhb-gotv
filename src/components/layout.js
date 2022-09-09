@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
         handleState1={() => handleClick(1)}
         handleState2={() => handleClick(2)}
       ></Header>
-      {(activeIndex === 1) && <Missouri scrollPosition={scrollPosition} />}
+      {(activeIndex === 1) && <Missouri />}
       {(activeIndex === 2) && <Kansas />}
       <main>{children}</main>
       <Sticky
