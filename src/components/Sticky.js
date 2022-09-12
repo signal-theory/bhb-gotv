@@ -4,10 +4,10 @@ const Sticky = (props) => {
   return (
     <>
       <button
-        className={`sticky ${props.slideOutClass}`}
+        className={`sticky ${props.slideOutClass} ${props.stickyArrowClass}`}
         onClick={props.handleStickyBtn}
         onKeyDown={props.handleStickyBtn}>
-        <span className={props.stickyArrowClass}>MAKE A PLAN TO VOTE</span>
+        <span>MAKE A PLAN TO VOTE</span>
       </button>
       <div className={props.stickyClass}>
         <div className="popup-inner">

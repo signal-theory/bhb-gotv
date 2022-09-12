@@ -19,6 +19,7 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 const Layout = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const checkActive = (index, className) => activeIndex === index ? className : "";
+  const [stickyClick, setStickyClick] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0); const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
@@ -34,6 +35,10 @@ const Layout = ({ children }) => {
   const handleNav = (index) => {
     setActiveIndex(index);
     scrollTo("#stateTabs");
+  };
+  const handleStickyBtn = () => {
+    setStickyClick(true);
+    scrollTo("#checklist");
   };
   return (
     <>
@@ -54,10 +59,10 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <Sticky
         popupHeadline={"Choose Your State"}
-        slideOutClass={activeIndex === 0 ? "slideOut" : ""}
-        handleStickyBtn={() => scrollTo("#checklist")}
+        slideOutClass={activeIndex === 0 ? "slideOut" : stickyClick === true ? "slideOut" : ""}
+        handleStickyBtn={() => handleStickyBtn()}
         stickyClass={activeIndex === 0 ? "popup show" : "popup"}
-        stickyArrowClass={scrollPosition > 4240 ? "sticky-arrow top" : scrollPosition > 2400 && scrollPosition < 4240 ? "sticky-arrow side" : "sticky-arrow bottom"}
+        stickyArrowClass={scrollPosition > 4240 ? "top" : scrollPosition > 2400 && scrollPosition < 4240 ? "side" : "bottom"}
         handleSticky1={() => handleNav(1)}
         handleSticky2={() => handleNav(2)}
       />

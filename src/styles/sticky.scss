@@ -8,11 +8,20 @@ button.sticky {
   background-color: $primaryBlue;
   z-index: 99999;
   cursor: pointer;
-  transform: translate(100%, 0);
-  animation: slideIn 0.3s forwards ease-out 3s;
+  transform: translate(0, 0);
+  transition: all 0.2s ease-in-out;
 
   &.slideOut {
-    animation: slideOut 0.3s forwards ease-out;
+    right: -100%;
+    transform: translate(100%, 0);
+  }
+
+  @include media("<=lgphone") {
+    bottom: 10px;
+    top: auto;
+    width: 90%;
+    height: 70px;
+    right: 5%;
   }
 
   span {
@@ -25,6 +34,10 @@ button.sticky {
     max-width: 90px;
     margin: 0 auto;
 
+    @include media("<=lgphone") {
+      max-width: none;
+    }
+
     &:after {
       content: '';
       display: block;
@@ -34,10 +47,11 @@ button.sticky {
       background: url(../images/arrow-down.svg) no-repeat;
       background-size: contain;
       transform: translate(0, 0) rotate(0);
-      transition: all 0.2s ease-in-out;
     }
+  }
 
-    &.bottom {
+  &.bottom {
+    span {
       padding-bottom: 12px;
 
       &:after {
@@ -46,8 +60,15 @@ button.sticky {
         bottom: 12px;
       }
     }
+  }
 
-    &.side {
+  &.side {
+    @include media("<=lgphone") {
+      bottom: -100%;
+      left: auto
+    }
+
+    span {
       padding-left: 12px;
 
       &:after {
@@ -55,9 +76,12 @@ button.sticky {
         top: 50%;
         transform: translate(12px, -50%) rotate(90deg);
       }
-    }
 
-    &.top {
+    }
+  }
+
+  &.top {
+    span {
       padding-top: 12px;
 
       &:after {
