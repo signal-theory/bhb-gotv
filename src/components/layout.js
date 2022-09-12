@@ -18,7 +18,6 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Layout = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const handleClick = (index) => setActiveIndex(index);
   const checkActive = (index, className) => activeIndex === index ? className : "";
   const [scrollPosition, setScrollPosition] = useState(0); const handleScroll = () => {
     const position = window.pageYOffset;
@@ -26,7 +25,6 @@ const Layout = ({ children }) => {
   };
 
   useEffect(() => {
-    //console.log("Active Index: " + activeIndex);
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -48,8 +46,8 @@ const Layout = ({ children }) => {
         yourStateHeadline={"SELECT YOUR STATE"}
         tabClass1={`primary-btn ${checkActive(1, "active")}`}
         tabClass2={`primary-btn ${checkActive(2, "active")}`}
-        handleState1={() => handleClick(1)}
-        handleState2={() => handleClick(2)}
+        handleState1={() => handleNav(1)}
+        handleState2={() => handleNav(2)}
       ></Header>
       {(activeIndex === 1) && <Missouri />}
       {(activeIndex === 2) && <Kansas />}
