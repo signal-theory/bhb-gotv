@@ -18,7 +18,7 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Layout = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const checkActive = (index, className) => activeIndex === index ? className : "";
+  const checkActive = (index, className) => activeIndex === 0 ? "inactive" : activeIndex === index ? className : "";
   const [stickyClick, setStickyClick] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0); const handleScroll = () => {
     const position = window.pageYOffset;
