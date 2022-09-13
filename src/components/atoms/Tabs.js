@@ -11,13 +11,13 @@ const Tabs = (props) => {
             className={props.tabClass1}
             onClick={props.handleState1}
           >
-            MISSOURI
+            <span className="tablet-hide">VOTING IN</span> MISSOURI
           </button>
           <button
             className={props.tabClass2}
             onClick={props.handleState2}
           >
-            KANSAS
+            <span className="tablet-hide">VOTING IN</span> KANSAS
           </button>
         </div>
       </div>

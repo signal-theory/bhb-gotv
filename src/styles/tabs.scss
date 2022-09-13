@@ -7,23 +7,10 @@
 .header-tabs {
   width: 100vw;
 
-  &.show-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @include media("<=tablet") {
+    position: sticky;
     z-index: 99999;
-
-    .tabs {
-      background-color: transparent;
-    }
+    top: 72px;
   }
 
   .tabs {
@@ -33,36 +20,61 @@
     align-items: center;
     justify-content: center;
     background-color: $primaryYellow;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      background: rgb(40, 37, 96);
+      background: linear-gradient(0deg, rgba(40, 37, 96, 0.5) 0%, rgba(40, 37, 96, 0) 82%);
+      bottom: 0;
+      z-index: 99998;
+      pointer-events: none;
+    }
   }
 }
 
 .primary-btn {
-  margin: 0 1rem;
-  padding: 1rem 2.5rem;
+  margin: 0 0.5rem;
+  padding: 0.5rem 2rem;
   background-color: white;
   color: $primaryBlue;
   border: 0px;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 17px;
   font-family: $sans;
   font-weight: bold;
   cursor: pointer;
   position: relative;
-  z-index: 99998;
+  z-index: 99997;
 
   &.active {
     z-index: 99999;
-    transform: scale(1.1);
-  }
-
-  @include media(">=tablet") {
-    padding: 1rem 3rem;
   }
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) translate(0, -2px);
   }
+
+  @include media(">=lgphone") {
+    padding: 1rem 2rem;
+  }
+
+  @include media(">=tablet") {
+    margin: 0 1rem;
+    padding: 1rem 3rem;
+    font-size: 18px;
+  }
+
+  .tablet-hide {
+    @include media("<=lgphone") {
+      font-size: 12px;
+      white-space: nowrap;
+    }
+  }
+
 }
 
 
@@ -73,5 +85,5 @@
   margin: 0;
   padding: 0;
   background-color: white;
-  box-shadow: -1px -10px 40px 0px rgba(40, 37, 96, 0.45);
+  box-shadow: -1px 10px 10px 0px rgba(40, 37, 96, 0.25);
 }

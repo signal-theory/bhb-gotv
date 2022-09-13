@@ -50,9 +50,10 @@ const Missouri = (props) => {
               </>
             ))}
           </div>
+          <div id="faqs"></div>
         </div>
       </div>
-      <div className="section faqs primary-yellow" id="faqs">
+      <div className="section faqs primary-yellow">
         <Fade>
           <h1>{missouriData.headingFAQs}</h1>
         </Fade>

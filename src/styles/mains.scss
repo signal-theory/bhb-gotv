@@ -95,8 +95,9 @@ p {
   font-size: calc(0.2vw + 15px);
 
   &.highlight {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20rem;
+    border: 3px dashed rgba(255, 255, 255, 0.6);
   }
 }
 
@@ -150,6 +151,10 @@ h3 {
   width: 100vw;
   height: auto;
   padding: 7.8rem 0 6.3rem;
+
+  @include media("<lgphone") {
+    padding: 4rem 0 6.3rem;
+  }
 }
 
 .container {
@@ -163,13 +168,19 @@ h3 {
 
 
 .mobile-hide {
-  @include media("<phone", "<lgphone") {
+  @include media("<lgphone") {
+    display: none;
+  }
+}
+
+.tablet-hide {
+  @include media(">=tablet") {
     display: none;
   }
 }
 
 .desktop-hide {
-  @include media(">=tablet", ">=desktop") {
+  @include media(">=desktop") {
     display: none;
   }
 }

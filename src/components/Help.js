@@ -9,7 +9,7 @@ const Help = () => {
         <Fade>
           <h1>{helpData.heading}</h1>
         </Fade>
-        <p>{helpData.paragraph}</p>
+        {helpData.paragraph}
       </div>
     </div>
   )

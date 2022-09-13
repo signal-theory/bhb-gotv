@@ -29,14 +29,16 @@
 
 .outreach-content {
   display: grid;
-  margin: 3rem auto 6rem;
+  margin: 3rem auto 0;
   border: 1px solid $primaryBlue;
-  border-width: 1px 0;
+  border-width: 1px 0 0;
   grid-template-columns: repeat(1, 1fr);
 
   @include media(">=tablet") {
     grid-template-columns: repeat(2, 1fr);
     align-items: stretch;
+    margin: 3rem auto;
+    border-width: 1px 0;
   }
 
   .column {

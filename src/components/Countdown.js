@@ -24,6 +24,13 @@ const Countdown = () => {
         hours: calcHours < 10 ? "0" + calcHours : calcHours,
         minutes: calcMins < 10 ? "0" + calcMins : calcMins,
       };
+    } else {
+
+      timeLeft = {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+      };
     }
 
     return timeLeft;
@@ -66,7 +73,7 @@ const Countdown = () => {
       <div className="countdown-container">
         <Fade direction="up" duration={500} triggerOnce>
           <div className="countdown ticker">
-            {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+            {timerComponents}
           </div>
         </Fade>
         <Fade>
