@@ -1,5 +1,6 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import { Fade } from "react-awesome-reveal"
 const Navbar = (props) => {
   // COUNTDOWN
   const countDownDate = new Date("Nov 8, 2022 7:00:00").getTime();
@@ -22,10 +23,12 @@ const Navbar = (props) => {
           <button onClick={() => scrollTo("#outreach")} onKeyDown={() => scrollTo("#outreach")}>BHB OUTREACH</button>
         </div>
       </div>
-      <div className="countdown-sticker">
-        <h2>{daysLeft}</h2>
-        <span>DAYS UNTIL ELECTION</span>
-      </div>
+      <Fade style={{ position: 'fixed', zIndex: 100000 }}>
+        <div className="countdown-sticker">
+          <h2>{daysLeft}</h2>
+          <span>DAYS UNTIL ELECTION</span>
+        </div>
+      </Fade>
     </>
   )
 }

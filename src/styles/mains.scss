@@ -173,11 +173,6 @@ h3 {
   }
 }
 
-.tablet-hide {
-  @include media(">=tablet") {
-    display: none;
-  }
-}
 
 .desktop-hide {
   @include media(">=desktop") {

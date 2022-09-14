@@ -6,7 +6,7 @@
 }
 
 .navbar-wrapper {
-  padding: 1.5rem 1rem 1.5rem;
+  padding: 1rem;
   overflow: auto;
   white-space: nowrap;
   flex-wrap: nowrap;
@@ -92,13 +92,14 @@
   display: flex;
 
   @include media("<=desktop") {
-    top: -15px;
-    right: -15px;
+    top: 38px;
+    right: -5px;
   }
 
-  @include media("<=tablet") {
-    display: none;
-  }
+  // @include media("<=tablet") {
+  //   top: 85px;
+  //   right: -15px;
+  // }
 
   h2 {
     font-family: $display;

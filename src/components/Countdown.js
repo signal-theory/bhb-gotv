@@ -24,13 +24,6 @@ const Countdown = () => {
         hours: calcHours < 10 ? "0" + calcHours : calcHours,
         minutes: calcMins < 10 ? "0" + calcMins : calcMins,
       };
-    } else {
-
-      timeLeft = {
-        days: 0,
-        hours: 0,
-        minutes: 0,
-      };
     }
 
     return timeLeft;
