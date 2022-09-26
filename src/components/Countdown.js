@@ -1,59 +1,11 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
+import Clock from "./atoms/Clock"
 import { Fade } from "react-awesome-reveal"
 import { countdownData } from "../data/data-countdown"
 
 
 const Countdown = () => {
-
-  // // COUNTDOWN
-  const calculateTimeLeft = () => {
-    const differenceDST = +new Date(`2022-11-6`) - +new Date();
-    const difference = +new Date(`2022-11-8`) - +new Date();
-    let timeLeft = {};
-    let calcDays = Math.floor(difference / (1000 * 60 * 60 * 24));
-    let calcHours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-    let calcMins = Math.floor((difference / 1000 / 60) % 60);
-
-    if (differenceDST > 0) {
-      calcHours = calcHours - 1;
-    };
-
-    if (difference > 0) {
-      timeLeft = {
-        days: calcDays < 10 ? "0" + calcDays : calcDays,
-        hours: calcHours < 10 ? "0" + calcHours : calcHours,
-        minutes: calcMins < 10 ? "0" + calcMins : calcMins,
-      };
-    }
-
-    return timeLeft;
-  };
-
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
-  useEffect(() => {
-    setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-  });
-
-  const timerComponents = [];
-
-  Object.keys(timeLeft).forEach((interval) => {
-    if (!timeLeft[interval]) {
-      return;
-    }
-
-    timerComponents.push(
-      <>
-        <div className="time">
-          {timeLeft[interval]}
-        </div>
-        <div className="time colon">:</div>
-      </>
-    );
-  });
-
+  let deadline = "November, 8, 2022";
 
   return (
     <div className="section" id="countdown">
@@ -64,13 +16,13 @@ const Countdown = () => {
         <p>{countdownData.paragraph}</p>
       </div>
       <div className="countdown-container">
-        <Fade direction="up" duration={500} triggerOnce>
+        <Fade direction="up" duration={500} delay={1000} triggerOnce>
           <div className="countdown ticker">
-            {timerComponents}
+            <Clock deadline={deadline} />
           </div>
         </Fade>
-        <Fade>
-          <div className="countdown legend" triggerOnce>
+        <Fade delay={1000} triggerOnce>
+          <div className="countdown legend">
             <div className="label">Days</div>
             <div className="label"></div>
             <div className="label">Hours</div>
