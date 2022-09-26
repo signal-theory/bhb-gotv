@@ -4,7 +4,7 @@ module.exports = {
     description: `The power is in our hands. Voting is our duty, our right, and our most powerful tool — we're here to make democratic participation more accessible and successful than ever before.`,
     author: `@babeshelpinbabes_st`,
     siteUrl: 'https://bhb.signaltheory.com',
-    image: "src/images/BHB_VoteYourHeartOut_social.png",
+    image: "/BHB_VoteYourHeartOut_social.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
