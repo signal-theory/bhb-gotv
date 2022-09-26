@@ -50,6 +50,11 @@
     margin: 2rem 0;
     font-size: 30px;
     line-height: 30px;
+
+    &.past {
+      font-style: italic;
+      text-decoration: line-through;
+    }
   }
 
   .column.h4 {
@@ -58,10 +63,10 @@
     font-size: 22px;
     line-height: 30px;
 
-    // &:first-of-type {
-    //   background-color: $primaryYellow;
-    //   border-radius: 20rem;
-    // }
+    &.past {
+      font-style: italic;
+      text-decoration: line-through;
+    }
   }
 
 }

@@ -5,7 +5,7 @@ import { countdownData } from "../data/data-countdown"
 
 
 const Countdown = () => {
-  let deadline = "November, 8, 2022";
+  let deadline = "November, 8, 2022 19:00:00";
 
   return (
     <div className="section" id="countdown">

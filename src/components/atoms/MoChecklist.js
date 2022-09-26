@@ -1,6 +1,7 @@
 import React from "react"
 import { Fade } from "react-awesome-reveal";
 import { missouriData } from "../../data/data-missouri"
+import missouriChecklist from "../../images/Checklist_Missouri.pdf"
 
 const MoChecklist = () => {
 
@@ -151,7 +152,7 @@ const MoChecklist = () => {
             </div>
           </div>
           <div className="checklist-buttons section">
-            <button className="download-btn">DOWNLOAD CHECKLIST</button>
+            <a className="download-btn" href={missouriChecklist} target="_blank" rel="noreferrer">DOWNLOAD CHECKLIST</a>
             <button className="share-btn">SHARE</button>
           </div>
         </div >

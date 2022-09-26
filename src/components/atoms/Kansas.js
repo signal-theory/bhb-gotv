@@ -13,6 +13,16 @@ const Kansas = () => {
     }
     setToggled(index);
   }
+  // COMPARE DATES
+  const date0 = Date.parse("October 18, 2022") - Date.parse(new Date());
+  const daysUntilDate0 = Math.floor(date0 / (1000 * 60 * 60 * 24));
+  const date1 = Date.parse("October 19, 2022") - Date.parse(new Date());
+  const daysUntilDate1 = Math.floor(date1 / (1000 * 60 * 60 * 24));
+  const date2 = Date.parse("November 1, 2022") - Date.parse(new Date());
+  const daysUntilDate2 = Math.floor(date2 / (1000 * 60 * 60 * 24));
+  const date3 = Date.parse("November 8, 2022") - Date.parse(new Date());
+  const daysUntilDate3 = Math.floor(date3 / (1000 * 60 * 60 * 24));
+
   return (
     <div className="panels">
       <div className="section registration-links">
@@ -38,16 +48,30 @@ const Kansas = () => {
         </Fade>
         <div className="dates-wrapper">
           <div className="dates-content">
-            {kansasData.dates.map((date) => (
-              <>
-                <h3 className="column h3" key={date.id}>
-                  {date.date}
-                </h3>
-                <h4 className={`column h4 `} key={date.id}>
-                  {date.title}
-                </h4>
-              </>
-            ))}
+            <h3 className={`column h3 ${daysUntilDate0 < -1 ? "past" : "upcoming"}`}>
+              {kansasData.dates[0].date}
+            </h3>
+            <h4 className={`column h4 ${daysUntilDate0 < -1 ? "past" : "upcoming"}`}>
+              {kansasData.dates[0].title}
+            </h4>
+            <h3 className={`column h3 ${daysUntilDate1 < -1 ? "past" : "upcoming"}`}>
+              {kansasData.dates[1].date}
+            </h3>
+            <h4 className={`column h4 ${daysUntilDate1 < -1 ? "past" : "upcoming"}`}>
+              {kansasData.dates[1].title}
+            </h4>
+            <h3 className={`column h3 ${daysUntilDate2 < -1 ? "past" : "upcoming"}`}>
+              {kansasData.dates[2].date}
+            </h3>
+            <h4 className={`column h4 ${daysUntilDate2 < -1 ? "past" : "upcoming"}`}>
+              {kansasData.dates[2].title}
+            </h4>
+            <h3 className={`column h3 ${daysUntilDate3 < -1 ? "past" : "upcoming"}`}>
+              {kansasData.dates[3].date}
+            </h3>
+            <h4 className={`column h4 ${daysUntilDate3 < -1 ? "past" : "upcoming"}`}>
+              {kansasData.dates[3].title}
+            </h4>
           </div>
           <div id="faqs"></div>
         </div>
