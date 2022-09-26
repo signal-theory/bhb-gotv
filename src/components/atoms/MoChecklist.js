@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { Fade } from "react-awesome-reveal";
 import { missouriData } from "../../data/data-missouri"
 import missouriChecklist from "../../images/Checklist_Missouri.pdf"
+import SocialShare from "./SocialShare";
 
 const MoChecklist = () => {
+  const [toggle, setToggle] = useState(false)
 
   return (
     <>
@@ -151,12 +153,17 @@ const MoChecklist = () => {
               </label>
             </div>
           </div>
-          <div className="checklist-buttons section">
-            <a className="download-btn" href={missouriChecklist} target="_blank" rel="noreferrer">DOWNLOAD CHECKLIST</a>
-            <button className="share-btn">SHARE</button>
-          </div>
-        </div >
-      </form >
+        </div>
+      </form ><div className="checklist-buttons section">
+        <a className="download-btn" href={missouriChecklist} target="_blank" rel="noreferrer">DOWNLOAD CHECKLIST</a>
+        <button className="share-btn" onClick={() => setToggle(!toggle)}>SHARE</button>
+        {toggle === true ? <SocialShare
+          shareURL={missouriData.shareURL}
+          title={missouriData.shareTitle}
+          description={missouriData.shareDescription}
+          hashtag0={missouriData.hashtag0}
+          hashtag1={missouriData.hashtag1} /> : null}
+      </div>
     </>
   )
 }

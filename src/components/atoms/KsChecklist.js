@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { Fade } from "react-awesome-reveal";
 import { kansasData } from "../../data/data-kansas"
 import kansasChecklist from "../../images/Checklist_Kansas.pdf"
+import SocialShare from "./SocialShare";
 
 const KsChecklist = () => {
-
+  const [toggle, setToggle] = useState(false)
   return (
     <>
       <div className="section checklist secondary-blue">
@@ -187,12 +188,19 @@ const KsChecklist = () => {
               </label>
             </div>
           </div>
-          <div className="checklist-buttons section">
-            <a className="download-btn" href={kansasChecklist} target="_blank" rel="noreferrer">DOWNLOAD CHECKLIST</a>
-            <button className="share-btn">SHARE</button>
-          </div>
+
         </div >
       </form >
+      <div className="checklist-buttons section">
+        <a className="download-btn" href={kansasChecklist} target="_blank" rel="noreferrer">DOWNLOAD CHECKLIST</a>
+        <button className="share-btn" onClick={() => setToggle(!toggle)}>SHARE</button>
+        {toggle === true ? <SocialShare
+          shareURL={kansasData.shareURL}
+          title={kansasData.shareTitle}
+          description={kansasData.shareDescription}
+          hashtag0={kansasData.hashtag0}
+          hashtag1={kansasData.hashtag1} /> : null}
+      </div>
     </>
   )
 }

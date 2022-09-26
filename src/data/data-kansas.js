@@ -108,5 +108,10 @@ export const kansasData = {
   ],
   headingChecklist: "My 2022 Voting Plan Checklist",
   paragraphChecklist:
-    "Complete the checklist to ensure you have everything you need to vote successfully."
+    "Complete the checklist to ensure you have everything you need to vote successfully.",
+  shareURL: "https://bhb.signaltheory.com/static/Checklist_Kansas-7a3227754c7dc1f96f51be4a1c8937ad.pdf",
+  shareTitle: "Make A Plan To Vote In Kansas",
+  shareHashtag0: "#voteyourheartout",
+  shareHashtag1: "#babeshelpinbabes",
+  shareDescription: "The power is in our hands. Voting is our duty, our right, and our most powerful tool — we're here to make democratic participation more accessible and successful than ever before."
 }

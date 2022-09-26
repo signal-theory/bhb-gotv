@@ -107,5 +107,11 @@ export const missouriData = {
   ],
   headingChecklist: "My 2022 Voting Plan Checklist",
   paragraphChecklist:
-    "Complete the checklist to ensure you have everything you need to vote successfully."
+    "Complete the checklist to ensure you have everything you need to vote successfully.",
+  shareURL: "http://localhost:8000/static/Checklist_Missouri-21fe4135183af204d829ec6ad5479ec2.pdf",
+  shareTitle: "Make A Plan To Vote In Missouri",
+  shareHashtag0: "#voteyourheartout",
+  shareHashtag1: "#babeshelpinbabes",
+  shareDescription: "The power is in our hands. Voting is our duty, our right, and our most powerful tool — we're here to make democratic participation more accessible and successful than ever before."
+
 }
