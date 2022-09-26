@@ -7,26 +7,27 @@ const SocialShare = (props) => {
     <div className="share-popup">
       <FacebookShareButton
         url={props.shareURL}
-        quote={props.title}
+        quote={props.description}
         hashtag={props.hashtag0}
         description={props.description}
       >
         <FacebookIcon size={32} round />
       </FacebookShareButton>
       <LinkedinShareButton
-        title={props.title}
-        summary={props.description}
-        source={props.shareURL}
+        url={props.shareURL}
       >
         <LinkedinIcon size={32} round />
       </LinkedinShareButton>
       <RedditShareButton
+        url={props.shareURL}
         title={props.title}
+        windowWidth={660}
+        windowHeight={460}
       >
         <RedditIcon size={32} round />
       </RedditShareButton>
       <TwitterShareButton
-        title={props.title}
+        title={props.description}
         url={props.shareURL}
         hashtags={[props.hashtag0, props.hashtag1]}
       >

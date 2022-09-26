@@ -8,7 +8,7 @@ import Outreach from "../components/Outreach"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Babes Helpin' Babes - Get Out The Vote 2022" />
+    <SEO title="Babes Helpin' Babes - Vote Your Heart Out 2022" />
     <Countdown></Countdown>
     <Outreach></Outreach>
   </Layout>

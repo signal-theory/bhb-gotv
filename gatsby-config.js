@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Vote Your Heart Out`,
-    description: `Babes Helpin' Babes at Signal Theory is an employee-driven initiative to encourage the masses to get to the polls so results more accurately embody the diverse opinions of all citizens.`,
-    author: `@bethwickerson`,
+    description: `The power is in our hands. Voting is our duty, our right, and our most powerful tool — we're here to make democratic participation more accessible and successful than ever before.`,
+    author: `@babeshelpinbabes_st`,
+    siteUrl: 'https://bhb.signaltheory.com',
+    image: "src/images/BHB_VoteYourHeartOut_social.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
