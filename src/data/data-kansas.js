@@ -104,9 +104,19 @@ export const kansasData = {
         <p><a href="https://sos.ks.gov/elections/22elec/2022-General-Election-Constitutional-Amendment-HCR-5022.pdf" target="_blank" rel="noopender noreferrer">Question 2</a> would preserve the right of citizens of each county that elected a county sheriff as of January 11, 2022, to continue electing the county sheriff. The amendment would also provide that a county sheriff only may be involuntarily removed from office pursuant to either a recall election or a writ of quo warranto initiated by the attorney general.</p>
         <p>Read more about both of these ballot measures from the <a href="https://www.sos.mo.gov/default.aspx?PageID=10056" target="_blank" rel="noopener noreferrer">Kansas Secretary of State</a>.</p>
       </>
+    },
+    {
+      title: "If I have additional questions about voting is there someone I can talk to?",
+      description: <>
+        <p>Election Protection is a national coalition that works year-round to ensure all voters have an equal opportunity to vote. They can answer questions about registration, absentee and early voting, and casting a vote at the polls.</p>
+        <p>Call a hotline to talk to a trained volunteer:<br />
+          English: <a href="tel:18886878683">866-OUR-VOTE</a><br />
+          Spanish/English: <a href="tel:18888398682">888-VE-Y-VOTA</a></p>
+        <p>Or visit their website at <a href="https://866ourvote.org" target="_blank" rel="noopener noreferrer">866ourvote.org</a> for other ways to reach out with questions.</p>
+      </>
     }
   ],
-  headingChecklist: "My 2022 Voting Plan Checklist",
+  headingChecklist: "My Kansas 2022 Voting Plan Checklist",
   paragraphChecklist:
     "Complete the checklist to ensure you have everything you need to vote successfully.",
   shareURL: "https://bhb.signaltheory.com",

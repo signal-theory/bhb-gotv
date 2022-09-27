@@ -103,9 +103,19 @@ export const missouriData = {
         <p><a href="https://www.sos.mo.gov/CMSImages/Elections/Petitions/ArticleXIISection3a.pdf" target="_blank" rel="noopender noreferrer">Constitutional Convention Question</a> A "yes" or "no" vote requiring the governor to call an election of delegates to serve at a convention for the purpose of revising or amending the Missouri Constitution. Any revisions or amendments will then be put to a vote of the people for their consideration. If passed, this measure will have no impact on taxes.</p>
         <p>Read more about all of these ballot measures from the <a href="https://www.sos.mo.gov/default.aspx?PageID=10056" target="_blank" rel="noopener noreferrer">Missouri Secretary of State</a>.</p>
       </>
+    },
+    {
+      title: "If I have additional questions about voting is there someone I can talk to?",
+      description: <>
+        <p>Election Protection is a national coalition that works year-round to ensure all voters have an equal opportunity to vote. They can answer questions about registration, absentee and early voting, and casting a vote at the polls.</p>
+        <p>Call a hotline to talk to a trained volunteer:<br />
+          English: <a href="tel:18886878683">866-OUR-VOTE</a><br />
+          Spanish/English: <a href="tel:18888398682">888-VE-Y-VOTA</a></p>
+        <p>Or visit their website at <a href="https://866ourvote.org" target="_blank" rel="noopener noreferrer">866ourvote.org</a> for other ways to reach out with questions.</p>
+      </>
     }
   ],
-  headingChecklist: "My 2022 Voting Plan Checklist",
+  headingChecklist: "My Missouri 2022 Voting Plan Checklist",
   paragraphChecklist:
     "Complete the checklist to ensure you have everything you need to vote successfully.",
   shareURL: "https://bhb.signaltheory.com",

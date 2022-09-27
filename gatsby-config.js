@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Vote Your Heart Out`,
-    description: `The power is in our hands. Voting is our duty, our right, and our most powerful tool — we're here to make democratic participation more accessible and successful than ever before.`,
+    description: `Whether you have questions or need resources, we've got the tools to help you vote.`,
     author: `@babeshelpinbabes_st`,
     siteUrl: 'https://bhb.signaltheory.com',
     image: "/BHB_VoteYourHeartOut_social.png",

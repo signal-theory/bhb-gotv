@@ -30,7 +30,7 @@ const MoChecklist = () => {
                   value="check_registration"
                   id="check_registration"
                 />
-                <p>Check voter registration <a href="https://s1.sos.mo.gov/elections/voterlookup" target="_blank" rel="noopener noreferrer">here.</a></p>
+                <p>I have checked my <a href="https://s1.sos.mo.gov/elections/voterlookup" target="_blank" rel="noopener noreferrer">voter registration</a></p>
               </label>
               <label className={`red-text checkbox`} for="register_here">
                 <input
@@ -38,7 +38,7 @@ const MoChecklist = () => {
                   value="register_here"
                   id="register_here"
                 />
-                <p>Register to vote <a href="https://s1.sos.mo.gov/elections/voterregistration/" target="_blank" rel="noopener noreferrer">here.</a></p>
+                <p>I have <a href="https://s1.sos.mo.gov/elections/voterregistration/" target="_blank" rel="noopener noreferrer">registered to vote</a></p>
               </label>
               <label className={`checkbox`} for="research_rules">
                 <input
@@ -46,7 +46,7 @@ const MoChecklist = () => {
                   value="research_rules"
                   id="research_rules"
                 />
-                <p>I have researched the <a href="https://www.sos.mo.gov/CMSImages/ElectionGoVoteMissouri//2021ElectionLaws_10.22.pdf" target="_blank" rel="noopener noreferrer">rules and regulations</a> around voting in Missouri.</p>
+                <p>I have researched the <a href="https://www.sos.mo.gov/CMSImages/ElectionGoVoteMissouri//2021ElectionLaws_10.22.pdf" target="_blank" rel="noopener noreferrer">rules and regulations</a> around voting in Missouri</p>
               </label>
               <label className={`checkbox`} for="research_rules">
                 <input
@@ -54,7 +54,7 @@ const MoChecklist = () => {
                   value="research_rules"
                   id="research_rules"
                 />
-                <p>I have viewed my list of candidates with this <a href="https://ballotpedia.org/Missouri_Sample_Ballot" target="_blank" rel="noopener noreferrer">sample ballot lookup tool.</a></p>
+                <p>I have viewed my list of candidates with this <a href="https://ballotpedia.org/Missouri_Sample_Ballot" target="_blank" rel="noopener noreferrer">sample ballot lookup tool</a></p>
               </label>
 
 
@@ -75,7 +75,7 @@ const MoChecklist = () => {
                   value="vote_bymail"
                   id="vote_bymail"
                 />
-                <p>By mail - <a href="https://www.sos.mo.gov/elections/goVoteMissouri/howtovote#absentee" target="_blank" rel="noopener noreferrer">Request your absentee ballot</a> <em>or</em></p>
+                <p>By mail - <a href="https://www.sos.mo.gov/elections/goVoteMissouri/howtovote#absentee" target="_blank" rel="noopener noreferrer">Request absentee ballot</a> <em>or</em></p>
               </label>
 
 
@@ -86,7 +86,7 @@ const MoChecklist = () => {
                   value="check_place"
                   id="check_place"
                 />
-                <p>Check the location of your polling place <a href="https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx" target="_blank" rel="noopener noreferrer">here.</a><br />
+                <p>I have checked the <a href="https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx" target="_blank" rel="noopener noreferrer">location of my polling place.</a><br />
                   <span className="red-text small">Polls are open from 6 a.m. to 7 p.m. If you're in line when your polling location closes, you are still allowed to vote. Stay in line!</span></p>
               </label>
               <label className="inputtext">My polling place is located at:
@@ -139,7 +139,7 @@ const MoChecklist = () => {
                   value="bill_id"
                   id="bill_id"
                 />
-                <p>A current utility bill, bank statement, paycheck, government check or other government document containing your name and address.</p>
+                <p>A current utility bill, bank statement, paycheck, government check or other government document containing your name and address</p>
               </label>
 
               <h2>Spread the Word</h2>
@@ -149,7 +149,7 @@ const MoChecklist = () => {
                   value="reach_out"
                   id="reach_out"
                 />
-                <p>Reach out to three friends or family members to help create a voting and/or carpool plan.</p>
+                <p>Reach out to three friends or family members to help create a voting and/or carpool plan</p>
               </label>
             </div>
           </div>
