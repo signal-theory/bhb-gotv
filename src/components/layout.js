@@ -15,6 +15,7 @@ import Sticky from "./Sticky"
 import Help from "./Help"
 import "../styles/mains.scss"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import Helmet from "react-helmet"
 
 const Layout = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -42,6 +43,17 @@ const Layout = ({ children }) => {
   };
   return (
     <>
+      <Helmet>
+        { /*Google tag (gtag.js)*/}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7MPJPTL3VE"></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7MPJPTL3VE');`}
+        </script>
+      </Helmet>
       <Navbar
         handleNav1={() => handleNav(1)}
         handleNav2={() => handleNav(2)}
