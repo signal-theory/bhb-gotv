@@ -5,6 +5,7 @@ import kansasChecklist from "../../images/Checklist_Kansas.pdf"
 import SocialShare from "./SocialShare";
 
 const KsChecklist = () => {
+  const [box1, setBox1] = useState(false)
   const [toggle, setToggle] = useState(false)
   return (
     <>
