@@ -5,7 +5,27 @@ import kansasChecklist from "../../images/Checklist_Kansas.pdf"
 import SocialShare from "./SocialShare";
 
 const KsChecklist = () => {
-  const [box1, setBox1] = useState(false)
+  // local storage
+  const [checkbox1, setCheckbox1] = useState(localStorage.getItem('check-registration') === 'true');
+  const [checkbox2, setCheckbox2] = useState(localStorage.getItem('register_here') === 'true');
+  const [checkbox3, setCheckbox3] = useState(localStorage.getItem('research_rules') === 'true');
+  const [checkbox4, setCheckbox4] = useState(localStorage.getItem('view_candidate') === 'true');
+  const [radio1, setRadio1] = useState(localStorage.getItem('vote_plan1') === 'true');
+  const [radio2, setRadio2] = useState(localStorage.getItem('vote_plan2') === 'true');
+  const [radio3, setRadio3] = useState(localStorage.getItem('vote_plan3') === 'true');
+  const [checkbox5, setCheckbox5] = useState(localStorage.getItem('check_place') === 'true');
+  const [notes, setNotes] = useState(localStorage.getItem("notes"));
+  const [radio4, setRadio4] = useState(localStorage.getItem('dayof1') === 'true');
+  const [radio5, setRadio5] = useState(localStorage.getItem('dayof2') === 'true');
+  const [radio6, setRadio6] = useState(localStorage.getItem('dayof3') === 'true');
+  const [radio7, setRadio7] = useState(localStorage.getItem('dayof4') === 'true');
+  const [radio8, setRadio8] = useState(localStorage.getItem('dayof5') === 'true');
+  const [radio9, setRadio9] = useState(localStorage.getItem('dayof6') === 'true');
+  const [radio10, setRadio10] = useState(localStorage.getItem('dayof7') === 'true');
+  const [radio11, setRadio11] = useState(localStorage.getItem('dayof8') === 'true');
+  const [checkbox6, setCheckbox6] = useState(localStorage.getItem('reach_out') === 'true');
+
+  // share button
   const [toggle, setToggle] = useState(false)
   return (
     <>
@@ -27,32 +47,56 @@ const KsChecklist = () => {
               <label className={`checkbox`} for="check_registration">
                 <input
                   type="checkbox"
-                  value="check_registration"
                   id="check_registration"
+                  checked={checkbox1}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem('check-registration', `${e.target.checked}`);
+                      setCheckbox1(e.target.checked);
+                    }
+                  }
                 />
                 <p>I have checked my <a href="https://myvoteinfo.voteks.org/voterview/" target="_blank" rel="noopener noreferrer">voter registration</a></p>
               </label>
               <label className={`red-text checkbox`} for="register_here">
                 <input
                   type="checkbox"
-                  value="register_here"
                   id="register_here"
+                  checked={checkbox2}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem('register_here', `${e.target.checked}`);
+                      setCheckbox2(e.target.checked);
+                    }
+                  }
                 />
                 <p>I have <a href="https://www.kdor.ks.gov/Apps/VoterReg" target="_blank" rel="noopener noreferrer">registered to vote</a></p>
               </label>
               <label className={`checkbox`} for="research_rules">
                 <input
                   type="checkbox"
-                  value="research_rules"
                   id="research_rules"
+                  checked={checkbox3}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem('research_rules', `${e.target.checked}`);
+                      setCheckbox3(e.target.checked);
+                    }
+                  }
                 />
                 <p>I have researched the <a href="https://sos.ks.gov/elections/voter-information.html" target="_blank" rel="noopener noreferrer">rules and regulations</a> around voting in Kansas</p>
               </label>
-              <label className={`checkbox`} for="research_rules">
+              <label className={`checkbox`} for="view_candidate">
                 <input
                   type="checkbox"
-                  value="research_rules"
-                  id="research_rules"
+                  id="view_candidate"
+                  checked={checkbox4}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem('view_candidate', `${e.target.checked}`);
+                      setCheckbox4(e.target.checked);
+                    }
+                  }
                 />
                 <p>I have viewed my list of candidates with this <a href="https://ballotpedia.org/Kansas_Sample_Ballot" target="_blank" rel="noopener noreferrer">sample ballot lookup tool</a></p>
               </label>
@@ -62,28 +106,58 @@ const KsChecklist = () => {
               <label className={`checkbox`} for="vote_inperson">
                 <input
                   type="radio"
-                  name="voteplan"
-                  value="vote_inperson"
                   id="vote_inperson"
+                  name="voteplan"
+                  checked={radio1}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem("vote_plan1", e.target.checked);
+                      setRadio1(e.target.checked);
+                      localStorage.setItem("vote_plan2", false);
+                      setRadio2(false);
+                      localStorage.setItem("vote_plan3", false);
+                      setRadio3(false);
+                    }
+                  }
                 />
                 <p>In-person on election day <em>or</em></p>
               </label>
               <label className={`checkbox`} for="vote_bymail">
                 <input
                   type="radio"
-                  name="voteplan"
-                  value="vote_bymail"
                   id="vote_bymail"
+                  name="voteplan"
+                  checked={radio2}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem("vote_plan2", e.target.checked);
+                      setRadio2(e.target.checked);
+                      localStorage.setItem("vote_plan3", false);
+                      setRadio3(false);
+                      localStorage.setItem("vote_plan1", false);
+                      setRadio1(false);
+                    }
+                  }
                 />
-                <p>By mail - Request an advanced ballot <a href="https://www.sos.ks.gov/forms//elections/AV1.pdf" target="_blank" rel="noopener noreferrer">English</a>/<a href="https://www.sos.ks.gov/forms//elections/Spanish/AV1%20(Spanish).pdf" target="_blank" rel="noopener noreferrer">Español</a> <em>or</em></p>
+                <p>By mail - Request an advanced ballot <a href="https://www.sos.ks.gov/forms/elections/AV1.pdf" target="_blank" rel="noopener noreferrer">English</a>/<a href="https://www.sos.ks.gov/forms/elections/Spanish/AV1%20(Spanish).pdf" target="_blank" rel="noopener noreferrer">Español</a> <em>or</em></p>
               </label>
 
               <label className={`checkbox`} for="vote_early">
                 <input
                   type="radio"
-                  name="voteplan"
-                  value="vote_early"
                   id="vote_early"
+                  name="voteplan"
+                  checked={radio3}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem("vote_plan3", e.target.checked);
+                      setRadio3(e.target.checked);
+                      localStorage.setItem("vote_plan2", false);
+                      setRadio2(false);
+                      localStorage.setItem("vote_plan1", false);
+                      setRadio1(false);
+                    }
+                  }
                 />
                 <p>Early Voting - <a href="https://www.usvotefoundation.org/vote/eoddomestic.htm" target="_blank" rel="noopener noreferrer">Find early voting locations</a></p>
               </label>
@@ -93,14 +167,28 @@ const KsChecklist = () => {
               <label className={`checkbox`} for="check_place">
                 <input
                   type="checkbox"
-                  value="check_place"
                   id="check_place"
+                  checked={checkbox5}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem('check_place', `${e.target.checked}`);
+                      setCheckbox5(e.target.checked);
+                    }
+                  }
                 />
                 <p>I have checked the <a href="https://myvoteinfo.voteks.org/VoterView" target="_blank" rel="noopener noreferrer">location of my polling place</a><br />
                   <span className="red-text small">Polls are open from 7 a.m. to 7 p.m., but counties have discretion to open earlier or close later. If you're in line when your polling location closes, you are still allowed to vote. Stay in line!</span></p>
               </label>
               <label className="inputtext">My polling place is located at:
-                <textarea></textarea>
+                <textarea
+                  value={notes}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem("notes", e.target.value);
+                      setNotes(e.target.value);
+                    }
+                  }
+                />
               </label>
             </div>
             <div className="column">
@@ -110,8 +198,28 @@ const KsChecklist = () => {
                 <input
                   type="radio"
                   name="dayof"
-                  value="drivers_id"
                   id="drivers_id"
+                  checked={radio4}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem("dayof1", e.target.checked);
+                      setRadio4(e.target.checked);
+                      localStorage.setItem("dayof2", false);
+                      setRadio5(false);
+                      localStorage.setItem("dayof3", false);
+                      setRadio6(false);
+                      localStorage.setItem("dayof4", false);
+                      setRadio7(false);
+                      localStorage.setItem("dayof5", false);
+                      setRadio8(false);
+                      localStorage.setItem("dayof6", false);
+                      setRadio9(false);
+                      localStorage.setItem("dayof7", false);
+                      setRadio10(false);
+                      localStorage.setItem("dayof8", false);
+                      setRadio11(false);
+                    }
+                  }
                 />
                 <p>Driver's license <em>or</em></p>
               </label>
@@ -119,8 +227,28 @@ const KsChecklist = () => {
                 <input
                   type="radio"
                   name="dayof"
-                  value="passport_id"
                   id="passport_id"
+                  checked={radio5}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem("dayof2", e.target.checked);
+                      setRadio5(e.target.checked);
+                      localStorage.setItem("dayof3", false);
+                      setRadio6(false);
+                      localStorage.setItem("dayof4", false);
+                      setRadio7(false);
+                      localStorage.setItem("dayof5", false);
+                      setRadio8(false);
+                      localStorage.setItem("dayof6", false);
+                      setRadio9(false);
+                      localStorage.setItem("dayof7", false);
+                      setRadio10(false);
+                      localStorage.setItem("dayof8", false);
+                      setRadio11(false);
+                      localStorage.setItem("dayof1", false);
+                      setRadio4(false);
+                    }
+                  }
                 />
                 <p>Passport <em>or</em></p>
               </label>
@@ -128,8 +256,28 @@ const KsChecklist = () => {
                 <input
                   type="radio"
                   name="dayof"
-                  value="military_id"
                   id="military_id"
+                  checked={radio6}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem("dayof3", e.target.checked);
+                      setRadio6(e.target.checked);
+                      localStorage.setItem("dayof4", false);
+                      setRadio7(false);
+                      localStorage.setItem("dayof5", false);
+                      setRadio8(false);
+                      localStorage.setItem("dayof6", false);
+                      setRadio9(false);
+                      localStorage.setItem("dayof7", false);
+                      setRadio10(false);
+                      localStorage.setItem("dayof8", false);
+                      setRadio11(false);
+                      localStorage.setItem("dayof1", false);
+                      setRadio4(false);
+                      localStorage.setItem("dayof2", false);
+                      setRadio5(false);
+                    }
+                  }
                 />
                 <p>Military ID <em>or</em></p>
               </label>
@@ -137,8 +285,28 @@ const KsChecklist = () => {
                 <input
                   type="radio"
                   name="dayof"
-                  value="election_auth_id"
                   id="election_auth_id"
+                  checked={radio7}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem("dayof4", e.target.checked);
+                      setRadio7(e.target.checked);
+                      localStorage.setItem("dayof5", false);
+                      setRadio8(false);
+                      localStorage.setItem("dayof6", false);
+                      setRadio9(false);
+                      localStorage.setItem("dayof7", false);
+                      setRadio10(false);
+                      localStorage.setItem("dayof8", false);
+                      setRadio11(false);
+                      localStorage.setItem("dayof1", false);
+                      setRadio4(false);
+                      localStorage.setItem("dayof2", false);
+                      setRadio5(false);
+                      localStorage.setItem("dayof3", false);
+                      setRadio6(false);
+                    }
+                  }
                 />
                 <p>Identification issued by a local election authority <em>or</em></p>
               </label>
@@ -146,8 +314,28 @@ const KsChecklist = () => {
                 <input
                   type="radio"
                   name="dayof"
-                  value="native_tribe_id"
                   id="native_tribe_id"
+                  checked={radio8}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem("dayof5", e.target.checked);
+                      setRadio8(e.target.checked);
+                      localStorage.setItem("dayof6", false);
+                      setRadio9(false);
+                      localStorage.setItem("dayof7", false);
+                      setRadio10(false);
+                      localStorage.setItem("dayof8", false);
+                      setRadio11(false);
+                      localStorage.setItem("dayof1", false);
+                      setRadio4(false);
+                      localStorage.setItem("dayof2", false);
+                      setRadio5(false);
+                      localStorage.setItem("dayof3", false);
+                      setRadio6(false);
+                      localStorage.setItem("dayof4", false);
+                      setRadio7(false);
+                    }
+                  }
                 />
                 <p>ID card issued by a Native American tribe <em>or</em></p>
               </label>
@@ -155,8 +343,28 @@ const KsChecklist = () => {
                 <input
                   type="radio"
                   name="dayof"
-                  value="employee_id"
                   id="employee_id"
+                  checked={radio9}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem("dayof6", e.target.checked);
+                      setRadio9(e.target.checked);
+                      localStorage.setItem("dayof7", false);
+                      setRadio10(false);
+                      localStorage.setItem("dayof8", false);
+                      setRadio11(false);
+                      localStorage.setItem("dayof1", false);
+                      setRadio4(false);
+                      localStorage.setItem("dayof2", false);
+                      setRadio5(false);
+                      localStorage.setItem("dayof3", false);
+                      setRadio6(false);
+                      localStorage.setItem("dayof4", false);
+                      setRadio7(false);
+                      localStorage.setItem("dayof5", false);
+                      setRadio8(false);
+                    }
+                  }
                 />
                 <p>Employee badge or ID issued by a government office <em>or</em></p>
               </label>
@@ -164,8 +372,28 @@ const KsChecklist = () => {
                 <input
                   type="radio"
                   name="dayof"
-                  value="education_id"
                   id="education_id"
+                  checked={radio10}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem("dayof7", e.target.checked);
+                      setRadio10(e.target.checked);
+                      localStorage.setItem("dayof8", false);
+                      setRadio11(false);
+                      localStorage.setItem("dayof1", false);
+                      setRadio4(false);
+                      localStorage.setItem("dayof2", false);
+                      setRadio5(false);
+                      localStorage.setItem("dayof3", false);
+                      setRadio6(false);
+                      localStorage.setItem("dayof4", false);
+                      setRadio7(false);
+                      localStorage.setItem("dayof5", false);
+                      setRadio8(false);
+                      localStorage.setItem("dayof6", false);
+                      setRadio9(false);
+                    }
+                  }
                 />
                 <p>Identification from an accredited postsecondary education institution in Kansas <em>or</em></p>
               </label>
@@ -173,8 +401,28 @@ const KsChecklist = () => {
                 <input
                   type="radio"
                   name="dayof"
-                  value="gov_id"
                   id="gov_id"
+                  checked={radio11}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem("dayof8", e.target.checked);
+                      setRadio11(e.target.checked);
+                      localStorage.setItem("dayof1", false);
+                      setRadio4(false);
+                      localStorage.setItem("dayof2", false);
+                      setRadio5(false);
+                      localStorage.setItem("dayof3", false);
+                      setRadio6(false);
+                      localStorage.setItem("dayof4", false);
+                      setRadio7(false);
+                      localStorage.setItem("dayof5", false);
+                      setRadio8(false);
+                      localStorage.setItem("dayof6", false);
+                      setRadio9(false);
+                      localStorage.setItem("dayof7", false);
+                      setRadio10(false);
+                    }
+                  }
                 />
                 <p>Public assistance ID card issued by a government office</p>
               </label>
@@ -182,8 +430,14 @@ const KsChecklist = () => {
               <label className={`checkbox`} for="reach_out">
                 <input
                   type="checkbox"
-                  value="reach_out"
                   id="reach_out"
+                  checked={checkbox6}
+                  onChange={
+                    (e) => {
+                      localStorage.setItem('reach_out', `${e.target.checked}`);
+                      setCheckbox6(e.target.checked);
+                    }
+                  }
                 />
                 <p>Reach out to three friends or family members to help create a voting and/or carpool plan</p>
               </label>
