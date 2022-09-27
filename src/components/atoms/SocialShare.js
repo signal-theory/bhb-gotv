@@ -15,6 +15,8 @@ const SocialShare = (props) => {
       </FacebookShareButton>
       <LinkedinShareButton
         url={props.shareURL}
+        title={props.title}
+        source="Babes Helpin Babes at Signal Theory"
       >
         <LinkedinIcon size={32} round />
       </LinkedinShareButton>
