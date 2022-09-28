@@ -159,10 +159,12 @@
 
 }
 
-.checklist-buttons {
+.checklist-buttons.section {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 0;
+  padding-bottom: 10rem;
 
   @include media("<tablet") {
     flex-direction: column;
