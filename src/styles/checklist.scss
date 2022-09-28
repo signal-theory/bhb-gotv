@@ -171,7 +171,8 @@
   }
 
   a {
-    display: block;
+    display: flex;
+    align-items: center;
     margin: 1rem;
     padding: 1rem 2.5rem;
     background-color: transparent;
@@ -201,7 +202,7 @@
 
     @include media("<tablet") {
       padding: 1rem;
-      width: Calc(100% - 2rem);
+      width: calc(90% - 2rem);
     }
 
     &:hover {
@@ -231,6 +232,11 @@
       height: 13px;
       margin-left: 8px;
     }
+
+    @include media("<tablet") {
+      padding: 1rem;
+      width: calc(100% - 2rem);
+    }
   }
 
   .share-popup {
@@ -238,6 +244,10 @@
     align-items: center;
     height: 32px;
     margin: 0;
+
+    @include media("<tablet") {
+      margin: 1rem 0 0;
+    }
 
     button {
       margin: 0 0.3rem;
