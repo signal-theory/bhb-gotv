@@ -1,3 +1,10 @@
+.header {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
 .header-wrapper {
   width: 100vw;
   display: flex;
@@ -51,12 +58,7 @@
       display: block;
       position: absolute;
       left: 8%;
-      top: 62%;
-    }
-
-    @include media(">=mddesktop") {
-      left: 8%;
-      top: 55%;
+      bottom: 5%;
     }
 
     @include media(">=lgdesktop") {
