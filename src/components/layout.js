@@ -18,6 +18,7 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 import Helmet from "react-helmet"
 
 const Layout = ({ children }) => {
+  localStorage.setItem('state_index', 0);
   const [activeIndex, setActiveIndex] = useState(JSON.parse(localStorage.getItem('state_index')) || 0);
   const checkActive = (index, className) => activeIndex === 0 ? "inactive" : activeIndex === index ? className : "";
   const [stickyClick, setStickyClick] = useState(false);
