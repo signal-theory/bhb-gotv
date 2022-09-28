@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem('state_index', JSON.stringify(activeIndex));
-
+    console.log(activeIndex)
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
