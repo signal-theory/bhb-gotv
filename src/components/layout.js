@@ -18,7 +18,7 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 import Helmet from "react-helmet"
 
 const Layout = ({ children }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(JSON.parse(localStorage.getItem('state_index')) || 0);
   const checkActive = (index, className) => activeIndex === 0 ? "inactive" : activeIndex === index ? className : "";
   const [stickyClick, setStickyClick] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0); const handleScroll = () => {
@@ -27,15 +27,17 @@ const Layout = ({ children }) => {
   };
 
   useEffect(() => {
+    localStorage.setItem('state_index', JSON.stringify(activeIndex));
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [activeIndex]);
 
   const handleNav = (index) => {
-    setActiveIndex(index);
     scrollTo("#stateTabs");
+    localStorage.setItem("state_index", index);
+    setActiveIndex(index);
   };
   const handleStickyBtn = () => {
     setStickyClick(true);

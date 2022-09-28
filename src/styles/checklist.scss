@@ -73,10 +73,10 @@
     padding: 0.5rem 3rem 0.5rem 0;
     // user-select: none;
 
-    // &.checked-item {
-    //   text-decoration: line-through;
-    //   color: gray;
-    // }
+    &:not(.checked):not(.open) {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
 
     p {
       margin: 0;
