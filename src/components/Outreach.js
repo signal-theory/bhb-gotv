@@ -34,10 +34,11 @@ const Outreach = () => {
               </p>
             </div>
           </div>
+          <div id="calendar" className="calendar-anchor"></div>
           <Fade>
             <h1>{outreachData.heading2}</h1>
           </Fade>
-          <div className="outreach-calendar">
+          <div className="outreach-calendar" >
             {outreachData.calendar.map((item) => (
               <>
                 <div className="column c1" key={item.id}>
