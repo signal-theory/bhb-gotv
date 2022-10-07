@@ -1,4 +1,4 @@
-
+import React from 'react'
 // images
 import babesLogos from "../images/BHBatST-logo.svg"
 import heartSticker from "../images/heart-sticker.svg"
@@ -16,18 +16,22 @@ export const outreachData = {
   heading2: "BHB Community Outreach Calendar",
   calendar: [
     {
-      date: "October XX",
-      title: "Event Name",
-      description: "Lorem IpsumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      location: "Location",
-      directions: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      date: "October 29",
+      title: "Souls to the Pools: Get Out the Vote Car Caravan",
+      description: "Deck your car out in signs encouraging people to vote and then join in a car caravan to spread the word around KCK!",
+      location: "Kansas City Kansas Community College",
+      directions: <p>9:30 a.m. - 11:00 a.m.<br />
+        7250 State Ave.<br />
+        Kansas City, KS  66112</p>,
+      link: "https://www.lwvjoco.org/content.aspx?page_id=4002&club_id=768754&item_id=1791834&event_date_id=255"
     },
     {
-      date: "October XX",
-      title: "Event Name",
-      description: "Lorem IpsumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      location: "Location",
-      directions: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      date: "October 16, 20 & 30",
+      title: "Online Election Protection Poll Observer Training",
+      description: "Hosted by the ACLU of Kansas, this poll observer training puts you at polling locations to watch election proceedings as part of ensuring free and fair elections. In addition to online, there are in-person trainings available for certain Kansas counties.",
+      location: "ACLU - Online",
+      directions: "6:30 p.m. - 8:00 p.m.",
+      link: "https://www.aclukansas.org/en/events"
     },
   ]
 }

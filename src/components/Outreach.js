@@ -34,7 +34,7 @@ const Outreach = () => {
               </p>
             </div>
           </div>
-          {/* <Fade>
+          <Fade>
             <h1>{outreachData.heading2}</h1>
           </Fade>
           <div className="outreach-calendar">
@@ -50,10 +50,11 @@ const Outreach = () => {
                 <div className="column c3" key={item.id}>
                   <h3>{item.location}</h3>
                   <p>{item.directions}</p>
+                  <a className="outline-btn" href={item.link} target="_blank" rel="noreferrer">REGISTER HERE</a>
                 </div>
               </>
             ))}
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

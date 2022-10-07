@@ -118,4 +118,44 @@
     }
   }
 
+  a {
+    display: inline-flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem 2.5rem;
+    background-color: transparent;
+    color: $primaryBlue;
+    border-radius: 10rem;
+    border: 4px solid white;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-size: calc(0.1vw + 13px);
+    font-family: $sans;
+    font-weight: bold;
+    cursor: pointer;
+
+    &.outline-btn {
+      border: 1px solid $primaryBlue;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        background: url(../images/arrow-right.svg) no-repeat;
+        background-size: contain;
+        width: 14px;
+        height: 11px;
+        margin-left: 8px;
+      }
+    }
+
+    @include media("<tablet") {
+      padding: 1rem;
+      width: calc(90% - 2rem);
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
 }
