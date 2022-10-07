@@ -17,7 +17,7 @@ export const outreachData = {
   calendar: [
     {
       date: "October 29",
-      title: "Souls to the Pools: Get Out the Vote Car Caravan",
+      title: "Souls to the Polls: Get Out the Vote Car Caravan",
       description: "Deck your car out in signs encouraging people to vote and then join in a car caravan to spread the word around KCK!",
       location: "Kansas City Kansas Community College",
       directions: <p>9:30 a.m. - 11:00 a.m.<br />
