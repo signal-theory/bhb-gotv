@@ -33,6 +33,12 @@ export const outreachData = {
       directions: "6:30 p.m. - 8:00 p.m.",
       link: "https://www.aclukansas.org/en/events"
     },
-  ]
+  ],
+  shareURL: "https://bhb.signaltheory.com/#calendar",
+  shareTitle: "Make A Plan To Vote In Kansas",
+  shareHashtag0: "#voteyourheartout",
+  shareHashtag1: "#babeshelpinbabes",
+  shareDescription: "The power is in our hands. Voting is our duty, our right, and our most powerful tool — use this voting plan checklist to ensure you have everything you need to vote successfully"
+
 }
 
