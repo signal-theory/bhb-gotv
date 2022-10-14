@@ -13,9 +13,9 @@ const Clock = ({ deadline }) => {
   const getTimeUntil = (deadline) => {
     const time = Date.parse(deadline) - Date.parse(new Date());
     if (time > 0) {
-      setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
-      setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
-      setMinutes(Math.floor((time / 1000 / 60) % 60));
+      setDays(Math.ceil(time / (1000 * 60 * 60 * 24)));
+      setHours(Math.ceil((time / (1000 * 60 * 60)) % 24));
+      setMinutes(Math.ceil((time / 1000 / 60) % 60));
       // setSeconds(Math.floor((time / 1000) % 60));
     }
   };
