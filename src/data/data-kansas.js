@@ -58,7 +58,7 @@ export const kansasData = {
     {
       title: "Is it too late to register to vote?",
       description: <>
-        <p className="highlight">Election day in Kansas is November 8, 2022. <strong>You can register to vote right now</strong> <a href="https://www.kdor.ks.gov/Apps/VoterReg" target="_blank" rel="noopener noreferrer">here</a>.</p>
+        <p className="highlight">Election day in Kansas is November 8, 2022.</p>
         <p><strong>Register by mail:</strong> Voter registration must be postmarked by 10/18/2022.</p>
         <p><strong>Register in person:</strong> Voter registration must be received by 10/18/2022.</p>
         <p><strong>Request an Advanced Voting Ballot By Mail:</strong> <a href="https://www.sos.ks.gov/forms//elections/AV1.pdf" target="_blank" rel="noopener noreferrer">English</a>/<a href="https://www.sos.ks.gov/forms//elections/Spanish/AV1%20(Spanish).pdf" target="_blank" rel="noopener noreferrer">Español</a>, application must be received by: 11/01/22</p>

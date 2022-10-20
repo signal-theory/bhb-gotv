@@ -49,7 +49,7 @@ export const missouriData = {
     {
       title: "Is it too late to register to vote?",
       description: <>
-        <p className="highlight">Election day in Missouri is November 8, 2022. <strong>You can register to vote right now <a href="https://s1.sos.mo.gov/elections/voterregistration/" target="_blank" rel="noopener noreferrer">here.</a></strong></p>
+        <p className="highlight">Election day in Missouri is November 8, 2022.</p>
         <p><strong>Register by mail:</strong> Voter registration must be postmarked by 10/12/2022.</p>
         <p><strong>Register in person:</strong> Voter registration must be received by 10/12/2022.</p>
         <p><strong>Return your completed absentee ballot application by mail:</strong> Ballot must be received by 5:00 pm 10/26/2022.</p>
